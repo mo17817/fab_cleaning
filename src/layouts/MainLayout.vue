@@ -2,24 +2,28 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
+        <!-- <q-btn
           flat
           dense
           round
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
-        />
+        /> -->
 
-        <q-toolbar-title>
-          Quasar App
+        <q-toolbar-title style="font-family: 'Times New Roman', Times, serif;">
+          <center>
+            <strong>
+          F.A.B Cleaning
+              </strong>
+          </center>
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <!-- <div>Quasar v{{ $q.version }}</div> -->
       </q-toolbar>
     </q-header>
 
-    <q-drawer
+    <!-- <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
       bordered
@@ -37,7 +41,7 @@
           v-bind="link"
         />
       </q-list>
-    </q-drawer>
+    </q-drawer> -->
 
     <q-page-container>
       <router-view />
@@ -99,7 +103,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    // EssentialLink
   },
 
   setup () {
