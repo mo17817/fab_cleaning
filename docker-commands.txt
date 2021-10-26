@@ -1,0 +1,10 @@
+https://medium.com/@jwdobken/develop-quasar-applications-with-docker-a19c38d4a6ac as reference
+
+####### Build docker image ########
+docker build -t fab-cleaning .
+
+###### Run docker container ########
+docker run -it -p 8000:80 --rm fab-cleaning
+
+###### Run docker container using docker-compose ########
+docker-compose up --build
