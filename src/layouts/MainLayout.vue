@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar class="bg-primary glossy text-white">
-        <q-breadcrumbs active-color="white" style="font-size: 20px">
+        <q-breadcrumbs active-color="white" style="font-size: 17px" gutter ="xl">
           <q-breadcrumbs-el
             label="Home"
             icon="home"
@@ -17,10 +17,10 @@
           <q-separator dark vertical inset />
           <q-breadcrumbs-el
             label="Services"
-            icon="whatshot"
+            icon="build"
             href="src/pages/index.vue"
           />
-          <q-separator dark vertical inset />
+          <!-- <q-separator dark vertical inset /> -->
           <q-avatar size="70px">
             <img
               class="rounded-circle align-self-start mr-3"
