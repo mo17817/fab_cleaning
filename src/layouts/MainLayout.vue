@@ -22,13 +22,13 @@
      
     > -->
               <!-- .shadow-{{ n }} -->
-          
+            <q-avatar>
               <img
                 class="rounded-circle align-self-start mr-3"
-                src="../assets/FABlogo.png"    
-                height="150"
-                width="150"
+                src="../assets/FABlogo.png"
               />
+            </q-avatar>
+              
               <!-- **found a webpage that lets you use free logos ^ ** -->
               <!-- </div> -->
               <!-- </div> -->
