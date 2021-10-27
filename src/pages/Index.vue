@@ -1,4 +1,5 @@
 <template>
+  <navbar></navbar>
   <q-page class="flex flex-center">
     <img
       alt="Quasar logo"
@@ -10,8 +11,11 @@
 
 <script>
 import { defineComponent } from 'vue';
+// import navbar from '../components/navbar.vue'
 
 export default defineComponent({
-  name: 'PageIndex'
+  name: 'PageIndex',
+  components: { }
+
 })
 </script>
