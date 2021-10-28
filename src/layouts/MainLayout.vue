@@ -1,10 +1,12 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout class="bg-white" view="lHh Lpr lFf">
     <q-header elevated>
-      <q-toolbar class="bg-primary glossy text-white">
+      <q-toolbar class="bg-primary glossy text-white ">
           <div class="col">
             <div class="row">
-                <q-avatar>
+                <q-avatar
+                size="xl"
+                >
                   <img
                     class="rounded-circle align-self-start mr-3"
                     src="../assets/FABlogo.png"
@@ -47,25 +49,7 @@
     </q-page-container>
   </q-layout>
 </template>
-<!-- <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer> **commented out the drawer**-->
 <script>
 
 
@@ -87,3 +71,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.q-layout {
+  background-color: green($color: #000000);
+}
+</style>
