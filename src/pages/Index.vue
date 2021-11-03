@@ -1,6 +1,12 @@
 <template>
 
-      <div class="q-pa-md">
+      <div class="fit">
+        <q-img
+          src="~src/assets/cleaning1.jpeg"
+          fit="cover"
+        >
+
+        </q-img>
             <div class="q-pa-md">
               <q-carousel
                 animated

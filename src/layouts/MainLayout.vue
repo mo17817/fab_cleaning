@@ -1,7 +1,7 @@
 <template>
   <q-layout class="bg-white" view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar class="bg-primary glossy text-white ">
+    <q-header>
+      <q-toolbar id="nav">
           <div class="col">
             <div class="row">
                 <q-avatar
@@ -22,7 +22,7 @@
           </div>
 
           <div class="col flex-break">
-                     <q-breadcrumbs active-color="white" gutter ="lg" align="right">
+                     <q-breadcrumbs active-color="none" gutter ="lg" align="right">
 
             <!-- <q-separator dark vertical inset /> -->
             <q-breadcrumbs-el
@@ -73,7 +73,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.q-layout {
-  background-color: green($color: #000000);
+#nav{
+  background-color: white;
+  color: black;
 }
 </style>
