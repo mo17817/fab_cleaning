@@ -4,7 +4,7 @@
       <navbar></navbar>
       
         <q-footer elavated>
-          <q-toolbar class = "bg-secondary glossy" >
+          <q-toolbar class = "bg-black" >
             <q-toolbar-title  reveal = "true" style = "bg-secondary"> Mo and Austin </q-toolbar-title>
               </q-toolbar>
         </q-footer>

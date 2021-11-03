@@ -1,6 +1,6 @@
 <template>
 <q-header>
-  <q-toolbar id="navbar">
+  <q-toolbar class="bg-black" id="navbar">
       <div class="col">
         <div class="q-avatar">
           <img src="~assets/FABlogo.png" alt="Fab Logo" id="logo"/>
@@ -8,11 +8,22 @@
       </div>
       <div class="col" align="right">
         <q-btn
-          class="bg-white text-primary"
+          class="text-white"
+          flat
+          rounded
+          to="/"
+        >
+          Home
+        </q-btn>
+        <q-btn
+          class="text-white"
+          flat
+          rounded
           to="/services"
         >
           Services
         </q-btn>
+        
       </div>
   </q-toolbar>
 </q-header>
