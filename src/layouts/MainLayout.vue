@@ -25,6 +25,42 @@
             <img
               class="rounded-circle align-self-start mr-3"
               src="../assets/FABlogo.png"
+  <q-layout class="bg-white" view="lHh Lpr lFf">
+    <q-header>
+      <q-toolbar id="nav">
+          <div class="col">
+            <div class="row">
+                <q-avatar
+                size="xl"
+                >
+                  <img
+                    class="rounded-circle align-self-start mr-3"
+                    src="../assets/FABlogo.png"
+                  />
+              </q-avatar>
+            </div>
+
+          </div>
+          <div class="col">
+            <q-toolbar-title align='center'>
+            FAB cleaning
+            </q-toolbar-title>
+          </div>
+
+          <div class="col flex-break">
+                     <q-breadcrumbs active-color="none" gutter ="lg" align="right">
+
+            <!-- <q-separator dark vertical inset /> -->
+            <q-breadcrumbs-el
+              label="About"
+              icon="widgets"
+              href="src/pages/index.vue"
+            />
+            <!-- <q-separator dark vertical inset /> -->
+            <q-breadcrumbs-el
+              label="Services"
+              icon="build"
+              href="src/pages/index.vue"
             />
           </q-avatar>
         </q-breadcrumbs>
@@ -131,3 +167,13 @@ export default defineComponent({
   },
 });
 </script>
+<<<<<<< HEAD
+=======
+
+<style lang="scss" scoped>
+#nav{
+  background-color: white;
+  color: black;
+}
+</style>
+>>>>>>> e2825f406d59cc9a4082a5939c42c0345cbbdd30
