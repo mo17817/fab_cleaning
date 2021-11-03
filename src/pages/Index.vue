@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <navbar></navbar>
   <q-page class="flex flex-center">
     <img
@@ -8,20 +7,7 @@
       style="width: 200px; height: 200px"
     >
   </q-page>
-</template>
-
-<script>
-import { defineComponent } from 'vue';
-// import navbar from '../components/navbar.vue'
-
-export default defineComponent({
-  name: 'PageIndex',
-  components: { }
-
-})
-=======
-
-      <div class="q-pa-md">
+  <!-- <div class="q-pa-md">
             <div class="q-pa-md">
               <q-carousel
                 animated
@@ -37,8 +23,10 @@ export default defineComponent({
                 <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
               </q-carousel>
             </div>
-    </div>
+    </div> -->
 </template>
+
+
 
 <script>
 import { ref } from 'vue'
@@ -50,5 +38,4 @@ export default {
     }
   }
 }
->>>>>>> 34be5ea58b8aa1f9b8ee88561e6f81579da33ff0
 </script>
