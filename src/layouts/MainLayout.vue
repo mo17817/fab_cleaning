@@ -5,8 +5,8 @@
       
         <q-footer elavated>
           <q-toolbar class = "bg-black" >
-            <q-toolbar-title  reveal = "true" style = "bg-secondary"> Mo and Austin </q-toolbar-title>
-              </q-toolbar>
+            <q-toolbar-title class="text-center text-italic text-subtitle2 text-weight-thin">Designed by Mo and Austin. For help building your site email austin4399@gmail.com </q-toolbar-title>
+          </q-toolbar>
         </q-footer>
       <router-view />
     </q-page-container>

@@ -2,30 +2,19 @@
 <div>
   <navbar></navbar>
   <q-page>
-    <q-img
+    <!-- <q-img
         id="banner"      
         src="~assets/cleaning1.jpeg"
       >
 
-    </q-img>
+    </q-img> -->
   
   
 
   <div class="q-pa-md row">
 
     <div class="col">
-      <q-card class="my-card text-white">
-        <q-img src="~assets/felix_headshot.jpeg"
-        >
-          <div class="absolute-bottom text-h6">
-            Felix Gorman
-          </div>
-        </q-img>
-
-        <q-card-section class="text-white">
-          My name is Felix Gorman. I was born and raised in Portland, Maine. I am the founder of FAB cleaning. Detailing cars has always been a passion. Now I want to pass the savings on to youuuuu
-        </q-card-section>
-      </q-card>
+      <h3 class="text-h3 text-weight-thin text-center">FAB cleaning</h3>
     </div>
   </div>
   </q-page>
