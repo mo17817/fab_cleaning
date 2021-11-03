@@ -1,6 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
+      <navbar></navbar>
+      
         <q-footer elavated>
           <q-toolbar class = "bg-secondary glossy" >
             <q-toolbar-title  reveal = "true" style = "bg-secondary"> Mo and Austin </q-toolbar-title>
@@ -59,12 +61,13 @@ const linksList = [
 ];
 
 import { defineComponent, ref } from "vue";
-// import navbar from "../components/navbar.vue";
+import navbar from "../components/navbar.vue";
 
 export default defineComponent({
   name: "MainLayout",
 
   components: {
+    navbar,
     // EssentialLink
   },
 

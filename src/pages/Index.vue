@@ -1,37 +1,37 @@
 <template>
+<div>
   <navbar></navbar>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/FABlogo.png"
-      style="width: 200px; height: 200px"
-    >
+  <q-page>
+    <q-img
+        src="~assets/cleaning1.jpeg"
+      >
+
+    </q-img>
+    <div class="q-pa-md row">
+
+  <div class="col">
+<q-card class="my-card text-white">
+      <q-img src="~assets/felix_headshot.jpeg"
+      >
+        <div class="absolute-bottom text-h6">
+          Felix Gorman
+        </div>
+      </q-img>
+
+      <q-card-section>
+        My name is Felix Gorman. I was born and raised in Portland, Maine. I am the founder of FAB cleaning. Detailing cars has always been a passion. Now I want to pass the savings on to youuuuu
+      </q-card-section>
+    </q-card>
+  </div>
+    
+
+
+
+
+
+  </div>
   </q-page>
-  <!-- <div class="q-pa-md">
-
-      <div class="fit">
-        <q-img
-          src="~src/assets/cleaning1.jpeg"
-          fit="cover"
-        >
-
-        </q-img>
-            <div class="q-pa-md">
-              <q-carousel
-                animated
-                v-model="slide"
-                arrows
-                navigation
-                infinite
-                class="rounded-borders"
-              >
-                <q-carousel-slide :name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg" />
-                <q-carousel-slide :name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg" />
-                <q-carousel-slide :name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg" />
-                <q-carousel-slide :name="4" img-src="https://cdn.quasar.dev/img/quasar.jpg" />
-              </q-carousel>
-            </div>
-    </div> -->
+</div>
 </template>
 
 
@@ -47,3 +47,18 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.q-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+.my-card{
+  width: 100%;
+  max-width: 400px;
+  height: 800px;
+}
+</style>
