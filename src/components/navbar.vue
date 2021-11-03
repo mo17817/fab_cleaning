@@ -2,6 +2,7 @@
 <q-header>
   <q-toolbar class="bg-black" id="navbar">
       <div class="col">
+
         <div class="q-avatar" size='md'>
           <img src="~assets/FABlogo.png" alt="Fab Logo" id="logo"/>
         </div>
@@ -22,14 +23,6 @@
           to="/services"
         >
           Services
-        </q-btn>
-        <q-btn
-          class="text-white"
-          flat
-          rounded
-          to="/"
-        >
-          Contact
         </q-btn>
         
       </div>
