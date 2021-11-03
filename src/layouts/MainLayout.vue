@@ -1,72 +1,5 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar class="bg-secondary glossy text-white">
-        <q-breadcrumbs align = "center" active-color="white" style="font-size: 17px" gutter="xl">
-          <q-breadcrumbs-el 
-            label="Home"
-            icon="home"
-            href="src/pages/index.vue"
-          />
-          <q-separator dark vertical inset />
-          <q-breadcrumbs-el 
-            label="About"
-            icon="widgets"
-            href="src/pages/index.vue"
-          />
-          <q-separator dark vertical inset />
-          <q-breadcrumbs-el align = "left"
-            label="Services"
-            icon="build"
-            href="src/pages/services.vue"
-          />
-          <!-- <q-separator dark vertical inset /> -->
-          <q-avatar size="70px">
-            <img
-              class="rounded-circle align-self-start mr-3"
-              src="../assets/FABlogo.png"
-  <q-layout class="bg-white" view="lHh Lpr lFf">
-    <q-header>
-      <q-toolbar id="nav">
-          <div class="col">
-            <div class="row">
-                <q-avatar
-                size="xl"
-                >
-                  <img
-                    class="rounded-circle align-self-start mr-3"
-                    src="../assets/FABlogo.png"
-                  />
-              </q-avatar>
-            </div>
-
-          </div>
-          <div class="col">
-            <q-toolbar-title align='center'>
-            FAB cleaning
-            </q-toolbar-title>
-          </div>
-
-          <div class="col flex-break">
-                     <q-breadcrumbs active-color="none" gutter ="lg" align="right">
-
-            <!-- <q-separator dark vertical inset /> -->
-            <q-breadcrumbs-el
-              label="About"
-              icon="widgets"
-              href="src/pages/index.vue"
-            />
-            <!-- <q-separator dark vertical inset /> -->
-            <q-breadcrumbs-el
-              label="Services"
-              icon="build"
-              href="src/pages/index.vue"
-            />
-          </q-avatar>
-        </q-breadcrumbs>
-        <q-toolbar-title> </q-toolbar-title>
-      </q-toolbar>
-    </q-header>
     <q-page-container>
         <q-footer elavated>
           <q-toolbar class = "bg-secondary glossy" >
@@ -77,25 +10,6 @@
     </q-page-container>
   </q-layout>
 </template>
-<!-- <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer> **commented out the drawer**-->
 <script>
 import EssentialLink from "components/EssentialLink.vue";
 
@@ -167,8 +81,6 @@ export default defineComponent({
   },
 });
 </script>
-<<<<<<< HEAD
-=======
 
 <style lang="scss" scoped>
 #nav{
@@ -176,4 +88,3 @@ export default defineComponent({
   color: black;
 }
 </style>
->>>>>>> e2825f406d59cc9a4082a5939c42c0345cbbdd30
