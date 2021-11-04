@@ -20,7 +20,10 @@
 
       <div class="col" id="banner-subtext-container">
         <h3 class="text-h2 text-center text-black">Like a breath-mint for the whip</h3>
-      </div>
+          <carousel></carousel>
+      <h1 class = "text-h2 text-center text-black"> Check out more of our services and plans below </h1>
+        
+    </div>
 
     </div>
   </div>
@@ -32,8 +35,11 @@
 
 <script>
 import { ref } from 'vue'
+// import Infocard from 'src/components/Infocard.vue'
+import Carousel from 'src/components/Carousel.vue'
 
 export default {
+  components: { Carousel},
   setup () {
     return {
       slide: ref(1)
@@ -59,5 +65,10 @@ export default {
   width: 100%;
   max-width: 400px;
   height: 800px;
+}
+.index_infocard{
+  width: 30%;
+  padding: 25%;
+  margin: 25%;
 }
 </style>
