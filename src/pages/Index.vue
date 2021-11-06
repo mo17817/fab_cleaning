@@ -40,7 +40,7 @@
   </div>
 
   <div class="col" id="card-container">
-    <q-card dark class="bg-secondary my-card text-black">
+    <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
       <q-card-section>
         <div class="text-h6">Our Changing Planet</div>
         <div class="text-subtitle2">by John Doe</div>
@@ -108,5 +108,9 @@ export default {
   margin-left: 5%;
   margin-right: 5%;
   
+}
+#qcard{
+  font-family: Raleway, serif;
+  text-shadow: 4px 4px 4px #aaa;
 }
 </style>
