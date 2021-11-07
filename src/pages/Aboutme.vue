@@ -5,17 +5,19 @@
         <q-card-section horizontal align="right" size="30">
           <q-card-section class="text-white" align = "left">
             <q-card-actions class = "center" id ="card-actions-container">
-             <h3 align = "left" gutter = "15"> About Us </h3>
-                <q-separator horizontal/>
-                <q-avatar rounded size = "60px" >
+             <h3 align = "left" id = "h3-container"> - About Us -  </h3>
+                <q-space />
+                <q-avatar rounded size = "75px" >
                      <q-img
                      src= "~assets/FABlogo.png"
                      />
                  </q-avatar>
                 <!-- <q-separator horizontal/> -->
-                    <h4> My name is felix and welcome to my website and see the services that i have available, check out the services below </h4>
+                    <q-separator class = "bg-primary" vertical />
+                    <h4> My name is felix and welcome to my website and see the services that i have available, check out my services and see what we can do for you  </h4>
               </q-card-actions>
           </q-card-section>
+          <q-separator class = "bg-primary" vertical />
           <div class="col-5" id="pic-container">
             <Carousel2></Carousel2>
           </div>
