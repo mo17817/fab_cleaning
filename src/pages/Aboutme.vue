@@ -1,21 +1,22 @@
 <template>
   <q-page class="bg-secondary">
     <div class="q-pa-md row" id="text-container">
-      <q-card class="my-card bg-black col" flat bordered>
+      <q-card class="my-card bg-black col" flat>
         <q-card-section horizontal align="right" size="30">
-          <q-card-section class="text-white" align = "center">
-              <q-card-actions class = "center" id ="card-actions-container">
-             <h4 align = "center"> Information about Us: </h4>
+          <q-card-section class="text-white" align = "left">
+            <q-card-actions class = "center" id ="card-actions-container">
+             <h3 align = "left" gutter = "15"> About Us </h3>
+                <q-separator horizontal/>
                 <q-avatar rounded size = "60px" >
                      <q-img
                      src= "~assets/FABlogo.png"
                      />
                  </q-avatar>
-                <q-separator horizontal/>
-                    <h4> Blashfjhtjhb ashjfjabcbusf dshj </h4>
+                <!-- <q-separator horizontal/> -->
+                    <h4> My name is felix and welcome to my website and see the services that i have available, check out the services below </h4>
               </q-card-actions>
           </q-card-section>
-          <div class="col" id="pic-container">
+          <div class="col-5" id="pic-container">
             <Carousel2></Carousel2>
           </div>
         </q-card-section>
@@ -39,7 +40,7 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   font-family: Raleway, serif;
-  text-shadow: 4px 4px 4px #aaa;
+  /* text-shadow: 4px 4px 4px #aaa; */
   bottom: 30vh;
 }
 #q-card {
@@ -51,10 +52,11 @@ export default defineComponent({
 }
 #text {
     font-family: Raleway, serif;
-    position: center;
+    position: left;
 }
 #card-actions-container{
-    padding-left: 20%;
+    /* padding-left: 20%; */
+    margin-left: 0%;
 
 }
 </style>
