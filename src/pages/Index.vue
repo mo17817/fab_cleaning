@@ -51,6 +51,7 @@
       <q-card-section>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
+        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
       </q-card-section>
     </q-card>
   </div>
