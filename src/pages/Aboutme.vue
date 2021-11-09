@@ -5,10 +5,10 @@
 </head>
   <q-page class="bg-secondary">
     <div class="q-pa-md bg-secondary" id="text-container">
-      <q-card class="my-card col bg-primary" flat>
+      <q-card class="my-card bg-primary" flat>
         <q-card-section  class = "row" horizontal align="right" size="30">
           <q-card-section class="col text-black" align = "left">
-            <q-card-actions class = "center" id ="card-actions-container">
+            <q-card-actions class = "center" id ="card-actions-container" align = "center">
                 <q-space  />
              <h3 align = "left"> - About Us -  </h3>
                 <q-space />
@@ -18,7 +18,7 @@
                      />
                  </q-avatar>
                     <q-separator class = "bg-secondary" vertical />
-                    <h6 class = "text-weight-light" >  My name is felix ....(about him)  </h6>
+                    <h4 class = "text-weight-light">  My name is felix ....(about him) </h4> 
               </q-card-actions>
           </q-card-section>
           <q-separator class = "bg-secondary" vertical />
@@ -49,9 +49,7 @@ export default defineComponent({
   /* text-shadow: 4px 4px 4px #aaa; */
   bottom: 30vh;
 }
-#q-card {
-  size: 500px;
-}
+
 #pic-container {
   padding-left: 2vh;
   size: 100vh;
