@@ -1,24 +1,28 @@
 <template>
+<head>
+  <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
   <q-page class="bg-secondary">
-    <div class="q-pa-md row" id="text-container">
-      <q-card class="my-card bg-black col" flat>
-        <q-card-section horizontal align="right" size="30">
-          <q-card-section class="text-white" align = "left">
+    <div class="q-pa-md bg-secondary" id="text-container">
+      <q-card class="my-card col bg-primary" flat>
+        <q-card-section  class = "row" horizontal align="right" size="30">
+          <q-card-section class="col text-black" align = "left">
             <q-card-actions class = "center" id ="card-actions-container">
-             <h3 align = "left" id = "h3-container"> - About Us -  </h3>
+                <q-space  />
+             <h3 align = "left"> - About Us -  </h3>
                 <q-space />
-                <q-avatar rounded size = "75px" >
+                <q-avatar rounded size = "85px">
                      <q-img
                      src= "~assets/FABlogo.png"
                      />
                  </q-avatar>
-                <!-- <q-separator horizontal/> -->
-                    <q-separator class = "bg-primary" vertical />
-                    <h4> My name is felix and welcome to my website and see the services that i have available, check out my services and see what we can do for you  </h4>
+                    <q-separator class = "bg-secondary" vertical />
+                    <h6 class = "text-weight-light" >  My name is felix ....(about him)  </h6>
               </q-card-actions>
           </q-card-section>
-          <q-separator class = "bg-primary" vertical />
-          <div class="col-5" id="pic-container">
+          <q-separator class = "bg-secondary" vertical />
+          <div class="col" id="pic-container">
             <Carousel2></Carousel2>
           </div>
         </q-card-section>
@@ -51,14 +55,11 @@ export default defineComponent({
 #pic-container {
   padding-left: 2vh;
   size: 100vh;
-}
-#text {
-    font-family: Raleway, serif;
-    position: left;
+  flex-direction: column;
 }
 #card-actions-container{
     /* padding-left: 20%; */
     margin-left: 0%;
-
 }
+
 </style>
