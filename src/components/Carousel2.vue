@@ -5,14 +5,14 @@
       navigation
       infinite
       :autoplay="autoplay"
-      arrows
       transition-prev="slide-right"
       transition-next="slide-left"
       @mouseenter="autoplay = false"
       @mouseleave="autoplay = true"
       height="500px"
       dark
-      arows
+      control-color="secondary"
+      vertical 
     >
       <q-carousel-slide :name="1" img-src="~assets/felix_baby.jpg"/>
       <q-carousel-slide :name="2" img-src="~assets/felix_headshot.jpeg" />
