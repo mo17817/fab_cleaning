@@ -16,28 +16,53 @@
   <div class="col">
     <div class="col">
       <div id="carousel-container">
+        <div class="col" id="text-container">
+            <q-card class="bg-transparent text-white no-shadow">
+              
+                <q-card-section>
+                <div class="text-h6">Fab Cleaning</div>
+                <div class="text-subtitle2">by John Doe</div>
+              </q-card-section>
+
+              <q-separator dark inset />
+
+              <q-card-section>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+                <!-- <q-btn to = "../src/pages/Aboutme" label = "AboutMe" /> -->
+              </q-card-section>
+              
+            </q-card>
+
+          </div>
+
+
+          <!-- ------- -->
+          <div class="q-pa-md row absolute-center" id="text-container">
+            <div class="col">
+              <!-- <div class="col" id="banner-text-container">
+                <h2 class="text-h3 text-weight-light text-center text-white">FAB cleaning</h2>
+              </div>
+
+              <div class="col" id="banner-subtext-container">
+                <h3 class="text-h2 text-center text-weight-light text-white">Like a breath-mint for the whip</h3>
+                <h1 class = "text-h2 text-center text-white"> Come see what we can do for you! </h1>
+              
+              </div> -->
+            </div>
+          </div>
+        <div class="col" id="banner-subtext-container">
+        
+      <!-- </div> -->
           <carousel></carousel>
+        </div>
       </div>
     </div>
   </div>
 
 
 
-  <div class="q-pa-md row absolute-center" id="text-container">
 
-
-    <div class="col">
-      <div class="col" id="banner-text-container">
-        <h2 class="text-h3 text-weight-light text-center text-white">FAB cleaning</h2>
-      </div>
-
-      <div class="col" id="banner-subtext-container">
-        <h3 class="text-h2 text-center text-weight-light text-white">Like a breath-mint for the whip</h3>
-        <h1 class = "text-h2 text-center text-white"> Come see what we can do for you! </h1>
-      
-      </div>
-    </div>
-  </div>
 
   <div class="col" id="card-container">
     <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
@@ -55,8 +80,54 @@
       </q-card-section>
     </q-card>
   </div>
+  <div class="col" id="card-container">
+    <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
+      <q-card-section>
+        <div class="text-h6">Our Changing Planet</div>
+        <div class="text-subtitle2">by John Doe</div>
+      </q-card-section>
 
-    
+      <q-separator dark inset />
+
+      <q-card-section>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
+      </q-card-section>
+    </q-card>
+  </div>
+    <div class="col" id="card-container">
+    <q-card dark class="bg-grey my-card text-weight-light" id ="qcard">
+      <q-card-section>
+        <div class="text-h6">Our Changing Planet</div>
+        <div class="text-subtitle2">by John Doe</div>
+      </q-card-section>
+
+      <q-separator dark inset />
+
+      <q-card-section>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
+      </q-card-section>
+    </q-card>
+  </div>
+    <div class="col" id="card-container">
+    <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
+      <q-card-section>
+        <div class="text-h6">Our Changing Planet</div>
+        <div class="text-subtitle2">by John Doe</div>
+      </q-card-section>
+
+      <q-separator dark inset />
+
+      <q-card-section>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
+      </q-card-section>
+    </q-card>
+  </div>
   </q-page>
 </div>
 </template>
@@ -95,13 +166,12 @@ export default {
 }
 
 #text-container{
-  top: 30vh;
-  display: flex;
-  flex-direction: column;
-  // align-self: center;
-  margin-bottom: 10%;
+  position: absolute;
+  z-index: 1;
+  top: 200px;
   font-family: Raleway, serif;
   text-shadow: 4px 4px 4px #aaa;
+  color: blue;
 }
 
 #card-container{
@@ -114,4 +184,7 @@ export default {
   font-family: Raleway, serif;
   text-shadow: 4px 4px 4px #aaa;
 }
+
+  
+
 </style>
