@@ -1,45 +1,132 @@
 <template>
-  <!-- <q-page> -->
-  <!--parallax needs to have a scroll parent element in it-->
-  <q-page>
-    <div class="q-pa-md q-gutter-md">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <div class="q-pa-xs bg-black">
+    <q-layout
+      view="lHh lpr lFf"
+      container
+      style="height: 600px"
+      class="shadow-2 rounded-borders bg-black"
+    >
+      <q-header bordered class="bg-black text-primary">
+        <q-toolbar>
+          <div class="col q-pa-xs">
+            <q-toolbar-title class="text-center" id="title" >
+              Our Services
+            </q-toolbar-title>
+          </div>
+        </q-toolbar>
+      </q-header>
+      <q-page-container>
+      <q-page class="q-pa-md">
+      <div class="q-pa-md q-gutter-md">
       <div class="row justify-between">
-        <q-parallax src="https://cdn.quasar.dev/img/parallax2.jpg">
-          <h1 class="text-white">Basic</h1>
+        <q-parallax src="~assets/cleaning4.jpeg">
+          <h1 class="text-white"> Tiers </h1>
         </q-parallax>
       </div>
-      <q-card class="my-card" flat bordered>
-        <q-card-section>
-
+      <q-separator />
+      <!--card section-->
+      <div class="col-5">
+        <q-card class="my-card bg-black text-primary" flat bordered height="250px">
+          <div class = "col justify-content-center" align = "center" id = "gold-tier">
+             Gold <q-icon name = "military_tech" size = "35px"/>
+            </div>
+          <q-card-section horizontal id = "img-title" align = "center">
+           <h6> we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design </h6>
+            <q-card-section> </q-card-section>
             <q-img
-              class="col-5"
-              src="~assets/goldtier.png"
+            class = "col-5"
+              src="~assets/cleaning2.jpeg"
+              id = "img"
+              align = "right"
             />
-            <q-img
-              class="col-5"
-              src="~assets/silvertier.png"
-            />
-
-
-          <q-card-section>
-            testing the horizontal card section. Here we can see the text will
-            wrap in a strange manor
           </q-card-section>
-        </q-card-section>
-      </q-card>
-    </div>
-  </q-page>
-  <!-- </q-page> -->
+        </q-card>
+      </div>
+        <!--end card setion-->
+        <!--silver tier-->
+        <div class ="col-5">
+        <q-card class="my-card bg-black text-grey-13" flat bordered height="250px">
+          <div class = "col justify-content-center text-grey-13" align = "center" id = "silver-tier">
+             Silver <q-icon name = "military_tech" color="grey-13" size = "35px"/>
+            </div>
+          <q-card-section horizontal id = "silver-img-title">
+             <h6> we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design </h6>
+            <q-card-section> </q-card-section>
+            <q-img
+            class = "col-5 justify-around"
+              src="~assets/cleaning2.jpeg"
+              id = "img"
+              align = "left"
+            />
+          </q-card-section>
+        </q-card>
+        </div>
+      <q-page-scroller position="bottom-right" :offset="[18, 18]">
+        <q-btn fab icon="keyboard_arrow_up" color="accent" />
+      </q-page-scroller>
+      </div>
+      </q-page>
+      </q-page-container>
+    </q-layout>
+  </div>
 </template>
 <script>
 import { defineComponent } from "@vue/composition-api";
 import { Parallax } from "components/Parallax.vue";
-// import { Horizontalcard } from "components/Horizontalcard.vue"
 export default defineComponent({
   setup() {},
   components: {
     // Parallax,
-    // Horizontalcard,
   },
 });
 </script>
+<style>
+#title {
+  font-family: "Lobster", cursive;
+  font-size: 35px;
+  position: relative;
+}
+#img-title{
+  font-family:Raleway, serif;
+  font-size: 40px;
+  /* padding-left: 20%; */
+  /* position: relative; */
+  /* z-index: 1; */
+}
+#gold-tier{
+  align-self: right;
+  font-size: 40px;
+  font-family: Raleway, serif;
+  padding-right: 35%;
+  margin-top: 3%;
+  font-weight: bold;
+}
+#silver-tier{
+  align-self: left;
+  font-size: 40px;
+  font-family: Raleway, serif;
+  padding-right: 35%;
+  margin-top: 3%;
+  font-weight: bold;
+}
+#silver-img-title{
+   font-family:Raleway, serif;
+  font-size: 40px;
+}
+</style>
