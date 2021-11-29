@@ -77,6 +77,24 @@
           </q-card-section>
         </q-card>
         </div>
+        <!--end silver start bronze-->
+         <div class ="col-5">
+        <q-card class="my-card bg-black text-brown-7" flat bordered height="250px">
+          <div class = "col justify-content-center text-brown-7" align = "center" id = "bronze-tier">
+             Bronze <q-icon name = "military_tech" color="brown-7" size = "35px"/>
+            </div>
+          <q-card-section horizontal id = "bronze-img-title">
+             <h6> we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design </h6>
+            <q-card-section> </q-card-section>
+            <q-img
+            class = "col-5 justify-around"
+              src="~assets/cleaning2.jpeg"
+              id = "img"
+              align = "left"
+            />
+          </q-card-section>
+        </q-card>
+        </div>
       <q-page-scroller position="bottom-right" :offset="[18, 18]">
         <q-btn fab icon="keyboard_arrow_up" color="accent" />
       </q-page-scroller>
@@ -124,6 +142,18 @@ export default defineComponent({
   padding-right: 35%;
   margin-top: 3%;
   font-weight: bold;
+}
+#bronze-tier{
+   align-self: left;
+  font-size: 40px;
+  font-family: Raleway, serif;
+  padding-right: 35%;
+  margin-top: 3%;
+  font-weight: bold;
+}
+#bronze-img-title{
+     font-family:Raleway, serif;
+  font-size: 40px;
 }
 #silver-img-title{
    font-family:Raleway, serif;
