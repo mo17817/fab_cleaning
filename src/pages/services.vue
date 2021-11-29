@@ -51,7 +51,7 @@
             <q-card-section> </q-card-section>
             <q-img
             class = "col-5"
-              src="~assets/cleaning2.jpeg"
+              src="~assets/goldtier.png"
               id = "img"
               align = "right"
             />
@@ -70,7 +70,7 @@
             <q-card-section> </q-card-section>
             <q-img
             class = "col-5 justify-around"
-              src="~assets/cleaning2.jpeg"
+              src="~assets/silvertier.png"
               id = "img"
               align = "left"
             />
@@ -88,7 +88,7 @@
             <q-card-section> </q-card-section>
             <q-img
             class = "col-5 justify-around"
-              src="~assets/cleaning2.jpeg"
+              src="~assets/bronzetier.png"
               id = "img"
               align = "left"
             />
