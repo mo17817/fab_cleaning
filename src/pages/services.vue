@@ -13,7 +13,7 @@
 
             <q-img
               class="col-5"
-              src="~assets/goldtier.jpg"
+              src="~assets/goldtier.png"
             />
             <q-img
               class="col-5"
