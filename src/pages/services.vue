@@ -19,7 +19,7 @@
     <q-layout
       view="lHh lpr lFf"
       container
-      style="height: 600px"
+      style="height: 100vh"
       class="shadow-2 rounded-borders bg-black"
     >
       <q-header bordered class="bg-black text-primary">
