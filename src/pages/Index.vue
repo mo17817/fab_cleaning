@@ -1,190 +1,92 @@
 <template>
-<head>
-  <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Raleway">
-</head>
-<div>
-  <navbar></navbar>
-  <q-page class="bg-black">
-    <!-- <q-img
-        id="banner"      
-        src="~assets/cleaning2.jpeg"
-      >
-
-    </q-img> -->
-  
-  <div class="col">
-    <div class="col">
-      <div id="carousel-container">
-        <div class="col" id="text-container">
-            <q-card class="bg-transparent text-white no-shadow">
-              
-                <q-card-section>
-                <div class="text-h6">Fab Cleaning</div>
-                <div class="text-subtitle2">by John Doe</div>
-              </q-card-section>
-
-              <q-separator dark inset />
-
-              <q-card-section>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua.
-                <!-- <q-btn to = "../src/pages/Aboutme" label = "AboutMe" /> -->
-              </q-card-section>
-              
-            </q-card>
-
-          </div>
-
-
-          <!-- ------- -->
-          <div class="q-pa-md row absolute-center" id="text-container">
-            <div class="col">
-              <!-- <div class="col" id="banner-text-container">
-                <h2 class="text-h3 text-weight-light text-center text-white">FAB cleaning</h2>
-              </div>
-
-              <div class="col" id="banner-subtext-container">
-                <h3 class="text-h2 text-center text-weight-light text-white">Like a breath-mint for the whip</h3>
-                <h1 class = "text-h2 text-center text-white"> Come see what we can do for you! </h1>
-              
-              </div> -->
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+   <div class="q-pa-sm bg-black">
+    <q-layout
+      view="lHh lpr lFf"
+      container
+      style="height: 90vh"
+      class="shadow-2 rounded-borders bg-black"
+    >
+    <q-header  class="bg-transparent text-white">
+      <q-toolbar>
+        <div class="col q-pa-xs">
+          <q-toolbar-title class="text-center" id="title">
+           Fab Cleaning
+          </q-toolbar-title>
+          <div class = "col bg-transparent text-white" align = "center" id = "breath-mint">
+            <h2> Like a breath mint for the whip </h2>
             </div>
-          </div>
-        <div class="col" id="banner-subtext-container">
-        
-      <!-- </div> -->
-          <carousel></carousel>
         </div>
-      </div>
+      </q-toolbar>
+    </q-header>
+    <div id="carousel-container">
+      <div class="col" id="text-container"></div>
+      <carousel></carousel>
     </div>
-  </div>
-
-
-
-
-
-  <div class="col" id="card-container">
-    <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
+    <div class = "row q-ma-sm">
+    <q-card class="my-card bg-black" flat bordered>
+      <q-card-section horizontal>
+        <q-card-section>
+          <!-- <q-img
+          class="col-5"
+          src="https://cdn.quasar.dev/img/parallax2.jpg"
+        /> -->
+        <div class = "col-6">
+          <q-toolbar-title elevated class = "q-pt-md bg-black text-primary">
+            <h3> What we offer</h3>
+            <!-- <q-separator horizontal color = "bg-primary"/> -->
+          </q-toolbar-title>
+           <h6 class = "text-primary"> sjsjahf ghjds fjkdk dhsjhfjs ahahhdh ahshaha s ss as d f sjffjsda fhjdrhgsf ahsjhjf sjhshjf ajdfjd sjskkhf hahdhjf dfhfhjdskfn dhsjshsd  fhsh fdhs shjvc shdj </h6>
+          </div>
+        </q-card-section>
+        <q-img
+          class="col-5"
+          src="~assets/cleaning1.jpeg"
+          height = "600px"
+        />
       </q-card-section>
-
-      <q-separator dark inset />
-
-      <q-card-section>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
-      </q-card-section>
-    </q-card>
-  </div>
-  <div class="col" id="card-container">
-    <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-separator dark inset />
-
-      <q-card-section>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
-      </q-card-section>
-    </q-card>
-  </div>
-    <div class="col" id="card-container">
-    <q-card dark class="bg-grey my-card text-weight-light" id ="qcard">
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-separator dark inset />
-
-      <q-card-section>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
-      </q-card-section>
-    </q-card>
-  </div>
-    <div class="col" id="card-container">
-    <q-card dark class="bg-grey my-card text-black text-weight-light" id ="qcard">
-      <q-card-section>
-        <div class="text-h6">Our Changing Planet</div>
-        <div class="text-subtitle2">by John Doe</div>
-      </q-card-section>
-
-      <q-separator dark inset />
-
-      <q-card-section>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-        <q-btn to = "../src/pages/Aboutme" label = "AboutMe" />
-      </q-card-section>
-    </q-card>
-  </div>
-  </q-page>
-</div>
+    </q-card> 
+     </div>
+    </q-layout>
+   </div>
 </template>
 
 
 
 <script>
-import { ref } from 'vue'
-// import Infocard from 'src/components/Infocard.vue'
-import Carousel from 'src/components/Carousel.vue'
+import { ref } from "vue";
+import Carousel from "src/components/Carousel.vue";
 
 export default {
-  components: { Carousel},
-  setup () {
+  components: { Carousel },
+  setup() {
     return {
-      slide: ref(1)
-    }
-  }
-}
+      slide: ref(1),
+    };
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-.q-img {
-  width: 100%;
-  height: 60%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+<style>
+#title {
+  font-family: "Lobster";
+  font-size: 35px;
+  /* position: relative; */
+  font-weight: bold;
 }
-
-#carousel-container{
-  padding: 0;
-  margin: 0;
-
+#breath-mint{
+  font-family: "Lobster";
+  font-size: 35px;
+  /* position: relative; */
+  font-weight: initial;
 }
-
-#text-container{
-  position: absolute;
-  z-index: 1;
-  top: 200px;
-  font-family: Raleway, serif;
-  text-shadow: 4px 4px 4px #aaa;
-  color: blue;
-}
-
-#card-container{
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
-  
-}
-#qcard{
-  font-family: Raleway, serif;
-  text-shadow: 4px 4px 4px #aaa;
-}
-
-  
-
 </style>
