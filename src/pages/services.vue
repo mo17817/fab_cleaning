@@ -95,7 +95,7 @@
           </q-card-section>
         </q-card>
         </div>
-      <q-page-scroller position="bottom-right" :offset="[18, 18]">
+      <q-page-scroller position="bottom-right">
         <q-btn fab icon="keyboard_arrow_up" color="accent" />
       </q-page-scroller>
       </div>
