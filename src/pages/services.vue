@@ -39,62 +39,6 @@
                 <h1 class="text-white">Tiers</h1>
               </q-parallax>
             </div>
-<<<<<<< HEAD
-          <q-card-section horizontal id = "img-title" align = "center">
-           <h6> we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design </h6>
-            <q-card-section> </q-card-section>
-            <q-img
-            class = "col-5"
-              src="~assets/goldtier.png"
-              id = "img"
-              align = "right"
-            />
-          </q-card-section>
-        </q-card>
-      </div>
-        <!--end card setion-->
-        <!--silver tier-->
-        <div class ="col-5">
-        <q-card class="my-card bg-black text-grey-13" flat bordered height="250px">
-          <div class = "col justify-content-center text-grey-13" align = "center" id = "silver-tier">
-             Silver <q-icon name = "military_tech" color="grey-13" size = "35px"/>
-            </div>
-          <q-card-section horizontal id = "silver-img-title">
-             <h6> we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design </h6>
-            <q-card-section> </q-card-section>
-            <q-img
-            class = "col-5 justify-around"
-              src="~assets/silvertier.png"
-              id = "img"
-              align = "left"
-            />
-          </q-card-section>
-        </q-card>
-        </div>
-        <!--end silver start bronze-->
-         <div class ="col-5">
-        <q-card class="my-card bg-black text-brown-7" flat bordered height="250px">
-          <div class = "col justify-content-center text-brown-7" align = "center" id = "bronze-tier">
-             Bronze <q-icon name = "military_tech" color="brown-7" size = "35px"/>
-            </div>
-          <q-card-section horizontal id = "bronze-img-title">
-             <h6> we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design </h6>
-            <q-card-section> </q-card-section>
-            <q-img
-            class = "col-5 justify-around"
-              src="~assets/bronzetier.png"
-              id = "img"
-              align = "left"
-            />
-          </q-card-section>
-        </q-card>
-        </div>
-      <q-page-scroller position="bottom-right">
-        <q-btn fab icon="keyboard_arrow_up" color="accent" />
-      </q-page-scroller>
-      </div>
-      </q-page>
-=======
             <q-separator />
             <!--card section-->
 
@@ -192,7 +136,6 @@
             </q-page-scroller>
           </div>
         </q-page>
->>>>>>> be7ad4730ea07606cef0fd9d940b2556a39bcb21
       </q-page-container>
     </q-layout>
   </div>
