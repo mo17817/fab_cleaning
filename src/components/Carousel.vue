@@ -15,8 +15,8 @@
       arows
     >
       <q-carousel-slide :name="1" img-src="~assets/cleaning1.jpeg"/>
-      <q-carousel-slide :name="2" img-src="~assets/cleaning2.jpeg" />
-      <q-carousel-slide :name="3" img-src="https://c.pxhere.com/photos/34/c8/car_mercedes_slk_auto_transport_design_transportation_luxury-1382710.jpg!d"  />
+      <q-carousel-slide :name="2" img-src="~assets/after5.jpeg" />
+      <q-carousel-slide :name="3" img-src="~assets/after12.jpeg"  />
       <q-carousel-slide :name="4" img-src="~assets/cleaning4.jpeg" />
     </q-carousel>
   </template>
