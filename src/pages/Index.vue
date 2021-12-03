@@ -18,18 +18,13 @@
     >
       <q-header class="bg-transparent text-primary" id = "header">
         <q-toolbar>
-          <div class="col q-pa-xs">
-            <q-toolbar-title class="text-center" id="title">
-              Fab Cleaning
-            </q-toolbar-title>
             <div
-              class="col bg-transparent text-primary"
+              class="col q-pa-xs bg-transparent text-primary"
               align="center"
               id="breath-mint"
             >
               <h2 id = "breath-mint">Like a breath mint for the whip</h2>
             </div>
-          </div>
         </q-toolbar>
       </q-header>
 
@@ -105,13 +100,14 @@
           </q-card-section>
           </q-card>
         </div>
-
+        
         <!--page scroller-->
         <q-page-scroller position="bottom-right" :scroll-offset="200" :offset="[18, 18]">
           <q-btn fab icon="keyboard_arrow_up" color="primary" />
         </q-page-scroller>
         <!-- <div class="col"></div> -->
       </div>
+      <Review></Review>
     </q-layout>
   </div>
 </template>
@@ -119,9 +115,10 @@
 <script>
 import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
+import Review from "src/components/Review.vue";
 
 export default {
-  components: { Carousel },
+  components: { Carousel, Review },
   setup() {
     return {
       slide: ref(1),
