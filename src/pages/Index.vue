@@ -73,9 +73,9 @@
             </q-card-section>
             <!-- before and after pics -->
 
-            <q-img class="col-3" src="~assets/cleaning4.jpeg" height="600px" />
+            <q-img class="col-3" src="~assets/before1.jpeg" height="600px" />
             <q-space vertical />
-            <q-img class="col-3" src="~assets/cleaning1.jpeg" height="600px" />
+            <q-img class="col-3" src="~assets/after2.jpeg" height="600px" />
             <!-- before and after pics -->
           </q-card-section>
         </q-card>
@@ -98,8 +98,8 @@
                   cleaning a car’s interior is more than just washing with water
                   and soap.
                 </h6>
-                 <q-img class="col-3" src="~assets/cleaning4.jpeg" height="350px" />
-                 <q-img class="col-3" src="~assets/cleaning1.jpeg" height="350px" />
+                 <q-img class="col-3" src="~assets/before4.jpeg" height="350px" />
+                 <q-img class="col-3" src="~assets/after17.jpeg" height="350px" />
               </div>
             </q-card-section>
           </q-card-section>
