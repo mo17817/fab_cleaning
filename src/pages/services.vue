@@ -15,25 +15,27 @@
       rel="stylesheet"
     />
   </head>
-  <div class="q-pa-xs bg-black">
+  <div class="q-pa-sm bg-black">
     <q-layout
       view="lHh lpr lFf"
       container
       style="height: 100vh"
       class="shadow-2 rounded-borders bg-black"
     >
-      <q-header bordered class="bg-black text-primary">
+      <q-header bordered class="bg-black text-primary" id="header">
         <q-toolbar>
-          <div class="col q-pa-xs">
-            <q-toolbar-title class="text-center" id="title">
-              Our Services
-            </q-toolbar-title>
-          </div>
+          <div
+              class="col q-pa-xs bg-transparent text-primary"
+              align="center"
+              id="breath-mint"
+            >
+              <h2 id = "our-services">Our Services</h2>
+            </div>
         </q-toolbar>
       </q-header>
-      <q-page-container>
-        <q-page class="q-pa-md">
-          <div class="q-pa-md q-gutter-md">
+
+
+          <div class="q-gutter-md">
             <div class="row justify-between">
               <q-parallax src="~assets/cleaning4.jpeg">
                 <h1 class="text-white">Tiers</h1>
@@ -135,8 +137,6 @@
               <q-btn fab icon="keyboard_arrow_up" color="accent" />
             </q-page-scroller>
           </div>
-        </q-page>
-      </q-page-container>
     </q-layout>
   </div>
 </template>
@@ -195,5 +195,11 @@ export default defineComponent({
 #gold-img-title {
   font-family: Raleway, serif;
   font-size: 40px;
+}
+#our-services {
+  font-family: "Lobster";
+  font-size: 35px;
+  /* position: fixed; */
+  /* font-weight: initial; */
 }
 </style>
