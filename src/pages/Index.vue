@@ -75,7 +75,7 @@
           </q-card-section>
         </q-card>
         <!-- second card -->
-        <div class = "row q-ma-sm q-ma-xs bg-black" id = "second-card">
+        <div class = "row q-ma-sm q-ma-xs no-border" border-color="secondary" id = "second-card">
           <q-card class="my-card bg-black" flat >
           <q-card-section horizontal>
             <q-card-section>
@@ -83,7 +83,7 @@
                 <h6 class="text-primary" id="second-para">
                   <h3>Exterior Car Detailing</h3>
                   <lb/>
-                   Outer beauty is nothing compared to inner beauty. Therefore,
+                  Outer beauty is nothing compared to inner beauty. Therefore,
                   it comes as no surprise that interior car detailing requires
                   more effort and time than exterior detailing. A dirty interior
                   cabin not only has a bad odor, but also adds to operational
@@ -102,12 +102,20 @@
         </div>
         
         <!--page scroller-->
-        <q-page-scroller position="bottom-right" :scroll-offset="200" :offset="[18, 18]">
+        <!-- <q-page-scroller position="bottom-right" :scroll-offset="200" :offset="[18, 18]">
           <q-btn fab icon="keyboard_arrow_up" color="primary" />
-        </q-page-scroller>
+        </q-page-scroller> -->
         <!-- <div class="col"></div> -->
       </div>
-      <Review></Review>
+      <div class="col" align="center">
+        <h1 class="text-white">Hear from our loyal patrons!</h1>
+
+        <Review></Review>
+        <Review></Review>
+        <Review></Review>
+      </div>
+      
+
     </q-layout>
   </div>
 </template>

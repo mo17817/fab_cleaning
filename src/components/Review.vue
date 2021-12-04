@@ -1,6 +1,5 @@
 <template>
   <div align="center">
-    <h1 class="text-white">Hear from our loyal patrons!</h1>
     <q-card class="q-ma-lg q-pa-md my-card bg-grey-10 text-primary" rounded>
       <q-separator color="primary" inset />
       <q-card-actions vertical align="center">
