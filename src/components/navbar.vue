@@ -1,7 +1,7 @@
 <template>
   <q-header>
     <q-toolbar class="bg-black" id="navbar">
-        <div class="col">
+        <div class="col-2">
           <div class="q-avatar" size='xl'>
             <img src="~assets/FABlogo.png" alt="Fab Logo" id="logo"/>
           </div>
@@ -11,8 +11,8 @@
                 FAB Cleaning
           </div>
         </div>
-        <div class="col" align="right">
-          <q-btn-dropdown class="bg-black"  color="black" stretch label="Dropdown">
+        <div class="col-2" align="right">
+          <q-btn-dropdown class="bg-black"  color="black" label="Home">
           <q-list class="bg-black" align="center">
             <q-item>
               <div class="col">
