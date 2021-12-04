@@ -1,12 +1,14 @@
 <template>
   <head>
-     <!-- <link href="https://cdn.jsdelivr.net/npm/vuesax/dist/vuesax.css" rel="stylesheet">
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui"> -->
-      <!-- vuesax link^  -->
-      <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-
-    </head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
     <body>
       <!-- <div id="app">
         <vs-button>Hello World</vs-button>
@@ -61,26 +63,14 @@
 <script>
 import { defineComponent } from "@vue/composition-api";
 import Carousel2 from "src/components/Carousel2.vue";
-// import Infocard3 from "src/components/Infocard3.vue";
-import Vue from 'vue'
-//Vuesax styles
 
-// import Vuesax from 'vuesax'
-// import 'vuesax/dist/vuesax.css'
-// Vue.use(Vuesax, {
-// })
 export default defineComponent({
   setup() {},
   components: {
     Carousel2,
-    // Infocard3,
   },
 });
-// new Vue({
-//          el: "#app"
-//         })
-// src="https://unpkg.com/vue/dist/vue.js"
-// src="https://unpkg.com/vuesax"
+
 </script>
 <style>
 #text-container {

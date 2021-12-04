@@ -10,29 +10,22 @@
     />
   </head>
   <div class="q-pa-sm bg-black">
-    <q-layout
-      view="lHh lpr lFf"
-      container
-      style="height: 100vh"
-      class="shadow-2 rounded-borders bg-black"
+    <div
+      class="col q-pa-xs text-primary"
+      align="center"
+      id="breath-mint"
     >
-      <q-header class="bg-transparent text-primary" id = "header">
-        <q-toolbar>
-            <div
-              class="col q-pa-xs bg-transparent text-primary"
-              align="center"
-              id="breath-mint"
-            >
-              <h2 id = "breath-mint">Like a breath mint for the whip</h2>
-            </div>
-        </q-toolbar>
-      </q-header>
+      <h2 id = "breath-mint">Like a breath mint for the whip</h2>
+    </div>
 
-      <div id="carousel-container">
-        <div class="col" id="text-container"></div>
-        <carousel></carousel>
-      </div>
-      <div class="row q-ma-sm bg-primary">
+    <div id="carousel-container">
+      <div class="col" id="text-container"></div>
+      <carousel></carousel>
+    </div>
+
+    <!-- first card -->
+    <div class="row q-ma-sm bg-primary">
+      <div class="row q-ma-sm">
         <q-card class="my-card bg-black" flat bordered>
           <q-card-section horizontal>
             <q-card-section>
@@ -67,56 +60,56 @@
               </div>
             </q-card-section>
             <!-- before and after pics -->
-
             <q-img class="col-3" src="~assets/before1.jpeg" height="600px" />
             <q-space vertical />
             <q-img class="col-3" src="~assets/after2.jpeg" height="600px" />
             <!-- before and after pics -->
           </q-card-section>
         </q-card>
-        <!-- second card -->
-        <div class = "row q-ma-sm q-ma-xs no-border" border-color="secondary" id = "second-card">
-          <q-card class="my-card bg-black" flat >
-          <q-card-section horizontal>
-            <q-card-section>
-              <div class="col-6">
-                <h6 class="text-primary" id="second-para">
-                  <h3>Exterior Car Detailing</h3>
-                  <lb/>
-                  Outer beauty is nothing compared to inner beauty. Therefore,
-                  it comes as no surprise that interior car detailing requires
-                  more effort and time than exterior detailing. A dirty interior
-                  cabin not only has a bad odor, but also adds to operational
-                  complications. Dirty air exhaust spreads allergens about the
-                  cabin; stain and grit causes switches to fail; and hazy
-                  windows can obscure the view of a driver. In that case,
-                  cleaning a car’s interior is more than just washing with water
-                  and soap.
-                </h6>
-                 <q-img class="col-3" src="~assets/before4.jpeg" height="350px" />
-                 <q-img class="col-3" src="~assets/after17.jpeg" height="350px" />
-              </div>
-            </q-card-section>
-          </q-card-section>
-          </q-card>
-        </div>
-        
-        <!--page scroller-->
-        <!-- <q-page-scroller position="bottom-right" :scroll-offset="200" :offset="[18, 18]">
-          <q-btn fab icon="keyboard_arrow_up" color="primary" />
-        </q-page-scroller> -->
-        <!-- <div class="col"></div> -->
       </div>
-      <div class="col" align="center">
-        <h1 class="text-white">Hear from our loyal patrons!</h1>
+    </div>
 
-        <Review></Review>
-        <Review></Review>
-        <Review></Review>
+
+
+    <!-- second card -->
+    <div class="row q-ma-sm bg-secondary">
+      <div class = "row q-ma-sm" id = "second-card">
+        <q-card class="my-card bg-black" flat >
+        <q-card-section horizontal>
+          <q-card-section>
+            <div class="col-6">
+              <h6 class="text-primary" id="second-para">
+                <h3>Exterior Car Detailing</h3>
+                <lb/>
+                Outer beauty is nothing compared to inner beauty. Therefore,
+                it comes as no surprise that interior car detailing requires
+                more effort and time than exterior detailing. A dirty interior
+                cabin not only has a bad odor, but also adds to operational
+                complications. Dirty air exhaust spreads allergens about the
+                cabin; stain and grit causes switches to fail; and hazy
+                windows can obscure the view of a driver. In that case,
+                cleaning a car’s interior is more than just washing with water
+                and soap.
+              </h6>
+                <q-img class="col-3" src="~assets/before4.jpeg" height="350px" />
+                <q-img class="col-3" src="~assets/after17.jpeg" height="350px" />
+            </div>
+          </q-card-section>
+        </q-card-section>
+        </q-card>
       </div>
       
-
-    </q-layout>
+      <!--page scroller-->
+      <q-page-scroller position="bottom-right" :scroll-offset="200" :offset="[18, 18]">
+        <q-btn fab icon="keyboard_arrow_up" color="primary" />
+      </q-page-scroller>
+    </div>
+    <div class="col" align="center">
+      <h1 class="text-white">Hear from our loyal patrons!</h1>
+      <Review></Review>
+      <Review></Review>
+      <Review></Review>
+    </div>
   </div>
 </template>
 

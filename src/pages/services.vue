@@ -15,26 +15,14 @@
       rel="stylesheet"
     />
   </head>
-  <div class="q-pa-sm bg-black">
-    <q-layout
-      view="lHh lpr lFf"
-      container
-      style="height: 100vh"
-      class="shadow-2 rounded-borders bg-black"
-    >
-      <q-header bordered class="bg-black text-primary" id="header">
-        <q-toolbar>
+      <div class="q-pa-sm bg-black">
           <div
-              class="col q-pa-xs bg-transparent text-primary"
-              align="center"
-              id="breath-mint"
-            >
-              <h2 id = "our-services">Our Services</h2>
-            </div>
-        </q-toolbar>
-      </q-header>
-
-
+            class="col q-pa-xs bg-transparent text-primary"
+            align="center"
+            id="breath-mint"
+          >
+            <h2 id = "our-services">Our Services</h2>
+          </div>
           <div class="q-gutter-md">
             <div class="row justify-between">
               <q-parallax src="~assets/cleaning4.jpeg">
@@ -137,8 +125,7 @@
               <q-btn fab icon="keyboard_arrow_up" color="accent" />
             </q-page-scroller>
           </div>
-    </q-layout>
-  </div>
+      </div>
 </template>
 <script>
 import { defineComponent } from "@vue/composition-api";
@@ -199,7 +186,5 @@ export default defineComponent({
 #our-services {
   font-family: "Lobster";
   font-size: 35px;
-  /* position: fixed; */
-  /* font-weight: initial; */
 }
 </style>
