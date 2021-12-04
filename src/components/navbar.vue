@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="col" align="right">
-        <q-btn-dropdown class="bg-black" stretch label="Dropdown">
+        <q-btn-dropdown class="bg-black"  color="black" stretch label="Dropdown">
         <q-list class="bg-black">
           <q-item>
             <q-btn
@@ -36,6 +36,16 @@
               Services
             </q-btn>
           </q-item>
+        <q-item>
+          <q-btn
+          class = "text-white"
+          flat 
+          rounded 
+          to = "/Aboutme"
+          >
+          About Me 
+          </q-btn>
+        </q-item>
         </q-list>
       </q-btn-dropdown>
         
