@@ -83,7 +83,7 @@ module.exports = configure(function (ctx) {
     // https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
       config: {
-        dark: false,
+        dark: true,
       },
 
       // iconSet: 'material-icons', // Quasar icon set
