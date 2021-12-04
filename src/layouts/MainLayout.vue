@@ -4,7 +4,7 @@
       <q-page-container>
         <router-view />
       </q-page-container>
-      <q-footer elavated>
+      <q-footer>
         <q-toolbar class = "bg-black" >
           <q-toolbar-title class="text-center text-italic text-subtitle2 text-weight-thin">Designed by Mo and Austin. For help building your site email austin4399@gmail.com </q-toolbar-title>
         </q-toolbar>
