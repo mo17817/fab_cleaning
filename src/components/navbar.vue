@@ -2,9 +2,9 @@
   <q-header>
     <q-toolbar class="bg-black" id="navbar">
         <div class="col-2">
-          <div class="q-avatar" size='xl'>
+          <q-avatar size="55px">
             <img src="~assets/FABlogo.png" alt="Fab Logo" id="logo"/>
-          </div>
+          </q-avatar>
         </div>
         <div class="col">
           <div class="text-primary text-center" id="title">
@@ -56,8 +56,8 @@
   </q-header>
 </template>
 
-<style lang="scss" scoped>
-  
+<style>
+
 </style>
 
 <script>
