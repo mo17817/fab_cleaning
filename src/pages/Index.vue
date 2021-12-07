@@ -17,12 +17,15 @@
     >
       <h2 id = "breath-mint">Like a breath mint for the whip</h2>
     </div>
-
+       
     <div id="carousel-container">
       <div class="col" id="text-container"></div>
+
+      <q-separator color = "secondary" size = "8px" /> 
+
       <carousel></carousel>
     </div>
-
+      <q-separator color = "secondary" size = "8px" />
     <!-- first card -->
     <div class="row q-ma-sm bg-primary">
       <div class="row q-ma-sm">
