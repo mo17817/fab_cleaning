@@ -9,7 +9,7 @@
       transition-next="slide-left"
       @mouseenter="autoplay = false"
       @mouseleave="autoplay = true"
-      height="500px"
+      height="150px"
       dark
       control-color="secondary"
       vertical 
