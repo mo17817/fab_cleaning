@@ -109,9 +109,10 @@
     </div>
     <div class="col" align="center">
       <h1 class="text-white">Hear from our loyal patrons!</h1>
+      <Carousel3> </Carousel3>
+      <!-- <Review></Review>
       <Review></Review>
-      <Review></Review>
-      <Review></Review>
+      <Review></Review> -->
     </div>
   </div>
 </template>
@@ -119,10 +120,11 @@
 <script>
 import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
-import Review from "src/components/Review.vue";
+// import Review from "src/components/Review.vue";
+import Carousel3 from "components/Carousel3.vue"
 
 export default {
-  components: { Carousel, Review },
+  components: { Carousel,  Carousel3 },
   setup() {
     return {
       slide: ref(1),
