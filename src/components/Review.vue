@@ -1,12 +1,11 @@
 <template>
-  <div align="center">
-    <q-card class="q-ma-lg q-pa-md my-card bg-grey-10 text-primary" rounded>
+    <q-card class="my-card bg-grey-10 text-primary" rounded>
       <q-separator color="primary" inset />
       <q-card-actions vertical align="center">
-        <q-avatar rounded size="100px">
+        <q-avatar rounded>
           <q-img src = "~assets/5-star.png"/>
         </q-avatar>
-        <h3>"We had a great experience at Fab Cleaning 5 stars!"</h3>
+        <h3>"We had a great experience at Fab Cleaning 5 stars! {{review.name}}"</h3>
       
           <q-btn class="bg-grey-8" align="center">
               <q-icon name = "star_rate" color = "secondary"/>
@@ -19,8 +18,25 @@
         </q-card-actions>
       <q-separator color="primary" inset />
     </q-card>
-  </div>
 </template>
+
+<script>
+
+export default {
+  data() {
+    return {
+      review: {
+        name: "test",
+        email: "",
+        rating: "",
+        review: ""
+      }
+    };
+  },
+}
+</script>
+
+
 <style lang="scss" scoped>
   .my-card {
     width: 50%;

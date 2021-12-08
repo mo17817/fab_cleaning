@@ -10,6 +10,11 @@
     />
   </head>
   <div class="q-pa-sm bg-black">
+    <button
+      @click="testEmailjs()"
+    >
+      Send Email
+    </button>
     <div
       class="col q-pa-xs text-primary"
       align="center"
@@ -114,6 +119,15 @@
       <Review></Review>
       <Review></Review> -->
     </div>
+
+
+
+
+    <!--  -->
+    <form ref="form">
+      <input type="text" ref="name" placeholder="Name" />
+      <input type="text" ref="email" placeholder="Email" />
+    </form>
   </div>
 </template>
 
@@ -122,6 +136,7 @@ import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
 // import Review from "src/components/Review.vue";
 import Carousel3 from "components/Carousel3.vue"
+import emailjs from "emailjs-com";
 
 export default {
   components: { Carousel,  Carousel3 },
@@ -130,7 +145,23 @@ export default {
       slide: ref(1),
     };
   },
-};
+  methods: {
+
+    testEmailjs() {
+      alert("function called");
+
+      emailjs.send("service_pymn93q", "template_enk29gg", this.ref.form , "user_2PwSHZeOnQt3MqFWKqaKx")
+            .then((result) => {
+                console.log(result);
+            }, (error) => {
+                console.log(error);
+            });
+    },
+    prev() {
+    this.slide.value--;
+  },
+},
+}
 </script>
 
 <style>

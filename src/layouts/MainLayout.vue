@@ -2,7 +2,9 @@
   <q-layout view="lHh Lpr lFf">
       <navbar></navbar>
       <q-page-container>
-        <router-view />
+        <q-page>
+          <router-view />
+        </q-page>
       </q-page-container>
       <q-footer>
         <q-toolbar class = "bg-black" >
