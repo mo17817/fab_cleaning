@@ -115,6 +115,7 @@
     <div class="col" align="center">
       <h1 class="text-white">Hear from our loyal patrons!</h1>
       <Carousel3> </Carousel3>
+      <Form></Form>
       <!-- <Review></Review>
       <Review></Review>
       <Review></Review> -->
@@ -124,10 +125,10 @@
 
 
     <!--  -->
-    <form ref="form">
+    <!-- <form ref="form">
       <input type="text" ref="name" placeholder="Name" />
       <input type="text" ref="email" placeholder="Email" />
-    </form>
+    </form> -->
   </div>
 </template>
 
@@ -135,11 +136,11 @@
 import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
 // import Review from "src/components/Review.vue";
-import Carousel3 from "components/Carousel3.vue"
+import Carousel3 from "components/Carousel3.vue";
 import emailjs from "emailjs-com";
-
+import Form from "components/Form.vue";
 export default {
-  components: { Carousel,  Carousel3 },
+  components: { Carousel,  Carousel3, Form },
   setup() {
     return {
       slide: ref(1),
