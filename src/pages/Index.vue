@@ -10,11 +10,14 @@
     />
   </head>
   <div class="q-pa-sm bg-black">
-    <button
+    <!-- <button
       @click="testEmailjs()"
     >
       Send Email
-    </button>
+    </button> -->
+    <q-btn>
+      Test emailJS    
+    </q-btn>
     <div
       class="col q-pa-xs text-primary"
       align="center"
@@ -115,7 +118,8 @@
     <div class="col" align="center">
       <h1 class="text-white">Hear from our loyal patrons!</h1>
       <Carousel3> </Carousel3>
-      <Form></Form>
+    
+      
       <!-- <Review></Review>
       <Review></Review>
       <Review></Review> -->
@@ -140,7 +144,7 @@ import Carousel3 from "components/Carousel3.vue";
 import emailjs from "emailjs-com";
 import Form from "components/Form.vue";
 export default {
-  components: { Carousel,  Carousel3, Form },
+  components: { Carousel,  Carousel3},
   setup() {
     return {
       slide: ref(1),
