@@ -61,11 +61,12 @@
                   <div>
                     <h5> Book a service today 
                       <q-btn 
-                        id  = "booking"
+                        id="booking"
+                        value="gold"
                         label="Book gold tier service"
                         hint = "Email and Phone number required"
                         color="primary"
-                        @click="dialog = true"
+                        @click="tierButton(this.value='Gold')"
                         />
                       </h5> 
                   </div>
@@ -93,7 +94,7 @@
                         id  = "booking"
                         label="Book silver tier service"
                         hint = "Email and Phone number required"
-                        @click="dialog = true"
+                        @click="tierButton(this.value='Silver')"
                         color="grey-13"
                         />
                       </h5> 
@@ -142,7 +143,7 @@
                         id  = "booking"
                         label="Book bronze tier service"
                         hint = "Email and Phone number required"
-                        @click="dialog = true"
+                        @click="tierButton(this.value='Bronze')"
                         color="brown-7"
                         
                         />
@@ -155,7 +156,7 @@
           </div>
       <q-dialog v-model="dialog">
         <Form
-          tier="gold"
+          :tier="value"
         ></Form>
       </q-dialog>
       </div>
@@ -172,9 +173,13 @@ export default {
     return {
       dialog: ref(false),
       tier: ref("Gold"),
+      value:"",
     };
   },
   methods: {
+    tierButton: function (button) {
+      this.dialog = true;
+    },
   },
 }
 </script>
