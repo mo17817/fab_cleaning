@@ -58,7 +58,17 @@
                     choose our gold tier membership as well as top class trim,
                     top qaulity interior design
                   </h6>
-                  
+                  <div>
+                    <h5> Book a service today 
+                      <q-btn 
+                        id  = "booking"
+                        label="Book gold tier service"
+                        hint = "Email and Phone number required"
+                        type="submit" 
+                        color="primary"
+                        />
+                      </h5> 
+                  </div>
                 </q-card-section>
               </q-card>
             <!--end card setion-->
@@ -78,6 +88,16 @@
                   <q-icon name="military_tech" color="grey-13" size="35px" />
                 </div>
                 <q-card-section horizontal id="silver-img-title" align="center">
+                  <h5> Book a service today 
+                      <q-btn 
+                        id  = "booking"
+                        label="Book silver tier service"
+                        hint = "Email and Phone number required"
+                        type="submit" 
+                        color="grey-13"
+                        to = "src/pages/Booking.vue"
+                        />
+                      </h5> 
                   <h6>
                     we offer a series of different options if you decide to
                     choose our gold tier membership as well as top class trim,
@@ -118,7 +138,16 @@
                     choose our gold tier membership as well as top class trim,
                     top qaulity interior design
                   </h6>
-                  
+                  <h5> Book a service today 
+                      <q-btn 
+                        id  = "booking"
+                        label="Book bronze tier service"
+                        hint = "Email and Phone number required"
+                        type="submit" 
+                        color="brown-7"
+                        
+                        />
+                      </h5> 
                 </q-card-section>
               </q-card>
             <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
@@ -130,12 +159,19 @@
 <script>
 import { defineComponent } from "@vue/composition-api";
 import { Parallax } from "components/Parallax.vue";
+import Form from "components/Form.vue";
 export default defineComponent({
   setup() {},
   components: {
     // Parallax,
+      // Form
   },
-});
+  methods: {
+      components(Form){
+        return Form(onclick)
+      }
+    },
+  },)
 </script>
 <style>
 #title {
@@ -186,5 +222,8 @@ export default defineComponent({
 #our-services {
   font-family: "Lobster";
   font-size: 35px;
+}
+#booking {
+  position: inline;
 }
 </style>
