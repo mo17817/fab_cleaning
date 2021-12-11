@@ -25,7 +25,7 @@
       <q-input
         filled 
         readonly
-        :v-model="tier"
+        v-model="model"
         label = "Service Tier"
         hint = "please enter the type of service"
         lazy-rules
@@ -71,7 +71,16 @@ import { ref } from 'vue'
 
 export default {
     props:{
-      tier: String,
+      tier: {
+        type: String,
+        default: "Default prop value"
+      }
+     
+    },
+    data (){
+      return{
+        model: this.tier
+      }
     },
   setup () {
     const $q = useQuasar()
