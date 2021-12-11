@@ -1,6 +1,8 @@
 <template>
-  <div class="q-pa-md text-primary" style="max-width: 600px">
-
+  <div class="q-pa-md text-primary bg-black full-width border">
+    <h3
+      align="center"
+    >{{this.tier.toString()}}</h3>
     <q-form
       @submit="onSubmit"
       @reset="onReset"
@@ -14,13 +16,20 @@
         lazy-rules
         :rules="[ val => val && val.length > 0 || 'Please type something']"
       />
+      <q-input
+      label="Your city"
+      hint="Name of your city"
+      filled
+      ></q-input>
 
       <q-input
         filled 
-        v-model ="service"
+        readonly
+        :v-model="tier"
         label = "Service Tier"
         hint = "please enter the type of service"
         lazy-rules
+        value = "value"
         :rules ="[ val => val && val.length > 0 || 'Please type something']"
         />
 
@@ -35,9 +44,10 @@
 
       <q-input
         filled
-        type="number"
+        type="textarea"
         v-model="age"
-        label="Your age *"
+        label="Tell us a bit about your service request"
+        hint="Car type (sedan, SUV, etc.) and any other details"
         lazy-rules
         :rules="[
           val => val !== null && val !== '' || 'Please type your age',
@@ -45,10 +55,9 @@
         ]"
       />
 
-
-      <q-toggle v-model="accept" label="I accept the license and terms" />
-
-      <div>
+      <div
+        align="center"
+      >
         <q-btn label="Submit" type="submit" color="primary"/>
         <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" />
       </div>
@@ -61,9 +70,12 @@ import { useQuasar } from 'quasar'
 import { ref } from 'vue'
 
 export default {
+    props:{
+      tier: String,
+    },
   setup () {
     const $q = useQuasar()
-
+    // let testing = this.props.tier
     const name = ref(null)
     const age = ref(null)
     const accept = ref(false)
@@ -75,6 +87,7 @@ export default {
       accept,
       email,
       service,
+      // testing,
 
       onSubmit () {
         if (accept.value !== true) {
@@ -102,7 +115,8 @@ export default {
         email.value = null
         service.value = null
       }
+      
     }
-  }
+  },
 }
 </script>
