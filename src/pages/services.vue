@@ -64,8 +64,8 @@
                         id  = "booking"
                         label="Book gold tier service"
                         hint = "Email and Phone number required"
-                        type="submit" 
                         color="primary"
+                        @click="dialog = true"
                         />
                       </h5> 
                   </div>
@@ -93,9 +93,8 @@
                         id  = "booking"
                         label="Book silver tier service"
                         hint = "Email and Phone number required"
-                        type="submit" 
+                        @click="dialog = true"
                         color="grey-13"
-                        to = "src/pages/Booking.vue"
                         />
                       </h5> 
                   <h6>
@@ -143,7 +142,7 @@
                         id  = "booking"
                         label="Book bronze tier service"
                         hint = "Email and Phone number required"
-                        type="submit" 
+                        @click="dialog = true"
                         color="brown-7"
                         
                         />
@@ -154,24 +153,30 @@
               <q-btn fab icon="keyboard_arrow_up" color="accent" />
             </q-page-scroller>
           </div>
+      <q-dialog v-model="dialog">
+        <Form
+          tier="gold"
+        ></Form>
+      </q-dialog>
       </div>
 </template>
 <script>
+import { ref } from "vue";
 import { defineComponent } from "@vue/composition-api";
 import { Parallax } from "components/Parallax.vue";
 import Form from "components/Form.vue";
-export default defineComponent({
-  setup() {},
-  components: {
-    // Parallax,
-      // Form
+
+export default {
+  components: {Form},
+  setup() {
+    return {
+      dialog: ref(false),
+      tier: ref("Gold"),
+    };
   },
   methods: {
-      components(Form){
-        return Form(onclick)
-      }
-    },
-  },)
+  },
+}
 </script>
 <style>
 #title {
