@@ -36,48 +36,55 @@
       <q-separator color = "secondary" size = "8px" />
     <!-- first card -->
     <div class="row q-ma-sm bg-primary">
-      <div class="row q-ma-sm">
+      <div class = "row q-ma-sm" id = "first-card">
         <q-card class="my-card bg-black" flat bordered>
-          <q-card-section horizontal>
-            <q-card-section>
-              <div class="col-6">
-                <q-toolbar-title
-                  elevated
-                  class="q-pt-md bg-black text-primary"
-                  id="first-para"
-                  align="center"
-                >
-                  <h3>
+        <q-card-section horizontal>
+          <q-card-section>
+            <div class="col">
+            
+                  <h3 class="text-primary" align="center" id="first-para">
                     What we offer
-                    <q-avatar rounded size = "70px">
-                      <q-img src="~assets/FABlogo.png" />
-                    </q-avatar>
+                    
                   </h3>
+                  <div class="col q-ma-sm" align="center">
+                    <q-avatar rounded size = "70px">
+                        <q-img align="center" src="~assets/FABlogo.png" />
+                    </q-avatar>
+    
+                  </div>
+
                   <q-separator horizontal color="yellow-7" />
-                </q-toolbar-title>
-                <h6 class="text-primary" id="second-para">
-                  <h3>Interior Car Detailing</h3>
-                  <lb />
-                  Outer beauty is nothing compared to inner beauty. Therefore,
-                  it comes as no surprise that interior car detailing requires
-                  more effort and time than exterior detailing. A dirty interior
-                  cabin not only has a bad odor, but also adds to operational
-                  complications. Dirty air exhaust spreads allergens about the
-                  cabin; stain and grit causes switches to fail; and hazy
-                  windows can obscure the view of a driver. In that case,
-                  cleaning a car’s interior is more than just washing with water
-                  and soap.
-                </h6>
-              </div>
-            </q-card-section>
-            <!-- before and after pics -->
-            <q-img class="col-3" src="~assets/before1.jpeg" height="600px" />
-            <q-space vertical />
-            <q-img class="col-3" src="~assets/after2.jpeg" height="600px" />
-            <!-- before and after pics -->
+              <h6 class="text-primary text-weight-light" id="first-para">
+                <h3>Exterior Car Detailing</h3>
+                <lb/>
+                Outer beauty is nothing compared to inner beauty. Therefore,
+                it comes as no surprise that interior car detailing requires
+                more effort and time than exterior detailing. A dirty interior
+                cabin not only has a bad odor, but also adds to operational
+                complications. Dirty air exhaust spreads allergens about the
+                cabin; stain and grit causes switches to fail; and hazy
+                windows can obscure the view of a driver. In that case,
+                cleaning a car’s interior is more than just washing with water
+                and soap.
+              </h6>
+            <div class="col q-my-sm">
+              <q-img class="col-3" src="~assets/before1.jpeg" height="600px" />
+              
+            </div>
+            <div class="col q-my-sm">
+              <q-img class="col-3" src="~assets/after2.jpeg" height="600px" />
+            </div>
+            
+            </div>
           </q-card-section>
+        </q-card-section>
         </q-card>
       </div>
+      
+      <!--page scroller-->
+      <q-page-scroller position="bottom-right" :scroll-offset="200" :offset="[18, 18]">
+        <q-btn fab icon="keyboard_arrow_up" color="primary" />
+      </q-page-scroller>
     </div>
 
 
@@ -102,8 +109,12 @@
                 cleaning a car’s interior is more than just washing with water
                 and soap.
               </h6>
+              <div class="col q-my-sm">
                 <q-img class="col-3" src="~assets/before4.jpeg" height="350px" />
+              </div>
+              <div class="col q-my-sm">
                 <q-img class="col-3" src="~assets/after17.jpeg" height="350px" />
+              </div>
             </div>
           </q-card-section>
         </q-card-section>
@@ -184,7 +195,6 @@ export default {
 }
 #first-para {
   font-family: "Raleway";
-  font-size: 40px;
 }
 #second-para {
   font-family: "Raleway";
