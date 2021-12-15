@@ -48,12 +48,20 @@
         v-model="age"
         label="Tell us a bit about your service request"
         hint="Car type (sedan, SUV, etc.) and any other details"
-        lazy-rules
-        :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
-        ]"
       />
+
+      <q-input 
+      filled
+      class = "text-white"
+      v-model = "datetime"
+      type = "datetime-local" 
+      value="2021-12-12T19:30" 
+      min="2021-12-07T00:00" 
+      max="2021-14-14T00:00"
+      name = "Date and Time"
+      hint = "Please select the date and time of your appointment"
+      />
+
 
       <div
         align="center"
@@ -90,12 +98,14 @@ export default {
     const accept = ref(false)
     const email = ref(null)
     const service = ref(null)
+    const datetime = ref(null)
     return {
       name,
       age,
       accept,
       email,
       service,
+      datetime,
       // testing,
 
       onSubmit () {
@@ -123,6 +133,7 @@ export default {
         accept.value = false
         email.value = null
         service.value = null
+        datetime = null 
       }
       
     }
