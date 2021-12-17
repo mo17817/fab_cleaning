@@ -15,15 +15,25 @@
       rel="stylesheet"
     />
   </head>
-      <div class="q-pa-sm bg-black">
-          <div
-            class="col q-pa-xs bg-transparent text-primary"
-            align="center"
-            id="breath-mint"
-          >
-            <h2 id = "our-services">Our Services</h2>
+  <div class="q-pa-xs bg-black">
+    <q-layout
+      view="lHh lpr lFf"
+      container
+      style="height: 600px"
+      class="shadow-2 rounded-borders bg-black"
+    >
+      <q-header bordered class="bg-black text-primary">
+        <q-toolbar>
+          <div class="col q-pa-xs">
+            <q-toolbar-title class="text-center" id="title">
+              Our Services
+            </q-toolbar-title>
           </div>
-          <div class="q-gutter-md">
+        </q-toolbar>
+      </q-header>
+      <q-page-container>
+        <q-page class="q-pa-md">
+          <div class="q-pa-md q-gutter-md">
             <div class="row justify-between">
               <q-parallax src="~assets/cleaning4.jpeg">
                 <h1 class="text-white">Tiers</h1>
@@ -31,14 +41,13 @@
             </div>
             <q-separator />
             <!--card section-->
-
+            <div class="col-5">
               <q-card
                 class="my-card bg-black text-primary"
                 flat
                 bordered
                 height="250px"
               >
-
                 <div
                   class="col justify-content-center"
                   align="center"
@@ -47,33 +56,24 @@
                   Gold <q-icon name="military_tech" size="35px" />
                 </div>
                 <q-card-section horizontal id="img-title" align="center">
-                  <q-img
-                    class="col-5"
-                    src="~assets/goldtier.png"
-                    id="img"
-                    align="right"
-                  />
                   <h6>
                     we offer a series of different options if you decide to
                     choose our gold tier membership as well as top class trim,
                     top qaulity interior design
                   </h6>
-                  <div>
-                    <h5> Book a service today 
-                      <q-btn 
-                        id="booking"
-                        value="gold"
-                        label="Book gold tier service"
-                        hint = "Email and Phone number required"
-                        color="primary"
-                        @click="tierButton(this.value='Gold')"
-                        />
-                      </h5> 
-                  </div>
+                  <q-card-section> </q-card-section>
+                  <q-img
+                    class="col-5"
+                    src="~assets/cleaning2.jpeg"
+                    id="img"
+                    align="right"
+                  />
                 </q-card-section>
               </q-card>
+            </div>
             <!--end card setion-->
             <!--silver tier-->
+            <div class="col-5">
               <q-card
                 class="my-card bg-black text-grey-13"
                 flat
@@ -88,30 +88,24 @@
                   Silver
                   <q-icon name="military_tech" color="grey-13" size="35px" />
                 </div>
-                <q-card-section horizontal id="silver-img-title" align="center">
-                  <h5> Book a service today 
-                      <q-btn 
-                        id  = "booking"
-                        label="Book silver tier service"
-                        hint = "Email and Phone number required"
-                        @click="tierButton(this.value='Silver')"
-                        color="grey-13"
-                        />
-                      </h5> 
+                <q-card-section horizontal id="silver-img-title">
                   <h6>
                     we offer a series of different options if you decide to
                     choose our gold tier membership as well as top class trim,
                     top qaulity interior design
                   </h6>
+                  <q-card-section> </q-card-section>
                   <q-img
                     class="col-5 justify-around"
-                    src="~assets/silvertier.png"
+                    src="~assets/cleaning2.jpeg"
                     id="img"
                     align="left"
                   />
                 </q-card-section>
               </q-card>
+            </div>
             <!--end silver start bronze-->
+            <div class="col-5">
               <q-card
                 class="my-card bg-black text-brown-7"
                 flat
@@ -126,62 +120,54 @@
                   Bronze
                   <q-icon name="military_tech" color="brown-7" size="35px" />
                 </div>
-                <q-card-section horizontal id="bronze-img-title" align="center">
-                  <q-img
-                    class="col-5 justify-around"
-                    src="~assets/bronzetier.png"
-                    id="img"
-                    align="left"
-                  />
+                <q-card-section horizontal id="bronze-img-title">
                   <h6>
                     we offer a series of different options if you decide to
                     choose our gold tier membership as well as top class trim,
                     top qaulity interior design
                   </h6>
-                  <h5> Book a service today 
-                      <q-btn 
-                        id  = "booking"
-                        label="Book bronze tier service"
-                        hint = "Email and Phone number required"
-                        @click="tierButton(this.value='Bronze')"
-                        color="brown-7"
-                        
-                        />
-                      </h5> 
+                  <q-card-section> </q-card-section>
+                  <q-img
+                    class="col-5 justify-around"
+                    src="~assets/cleaning2.jpeg"
+                    id="img"
+                    align="left"
+                  />
                 </q-card-section>
               </q-card>
-            <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
+              <div id = "services" class = "col bg-white text-white">
+                <ul>
+                  <li v-for="(tier, index) in services"> 
+                    {{ services.tier }}, {{ index }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <q-page-scroller position="bottom-right" :offset="[18, 18]">
               <q-btn fab icon="keyboard_arrow_up" color="accent" />
             </q-page-scroller>
           </div>
-      <q-dialog v-model="dialog">
-        <Form
-          :tier="value"
-        ></Form>
-      </q-dialog>
-      </div>
+        </q-page>
+      </q-page-container>
+    </q-layout>
+  </div>
 </template>
 <script>
-import { ref } from "vue";
 import { defineComponent } from "@vue/composition-api";
 import { Parallax } from "components/Parallax.vue";
-import Form from "components/Form.vue";
-
-export default {
-  components: {Form},
-  setup() {
-    return {
-      dialog: ref(false),
-      tier: ref("Gold"),
-      value:"",
-    };
+export default defineComponent({
+  setup() {},
+  components: {
+    // Parallax,
   },
-  methods: {
-    tierButton: function (button) {
-      this.dialog = true;
-    },
-  },
-}
+el: "service",
+data:{
+    services:[ 
+      {tier: "Our Gold tier offers Premuium exterior and interior detailing" , price: "32hr"},
+      {tier: "Our Silver tier offers Premium interior detailing and a wash"},
+      {tier: "Our Bronze tier offers Exterior detailing and a wash"} ]
+  };
+});
 </script>
 <style>
 #title {
@@ -200,6 +186,7 @@ export default {
   align-self: right;
   font-size: 40px;
   font-family: Raleway, serif;
+  padding-right: 35%;
   margin-top: 3%;
   font-weight: bold;
 }
@@ -207,6 +194,7 @@ export default {
   align-self: left;
   font-size: 40px;
   font-family: Raleway, serif;
+  padding-right: 35%;
   margin-top: 3%;
   font-weight: bold;
 }
@@ -214,6 +202,7 @@ export default {
   align-self: left;
   font-size: 40px;
   font-family: Raleway, serif;
+  padding-right: 35%;
   margin-top: 3%;
   font-weight: bold;
 }
@@ -224,16 +213,5 @@ export default {
 #silver-img-title {
   font-family: Raleway, serif;
   font-size: 40px;
-}
-#gold-img-title {
-  font-family: Raleway, serif;
-  font-size: 40px;
-}
-#our-services {
-  font-family: "Lobster";
-  font-size: 35px;
-}
-#booking {
-  position: inline;
 }
 </style>
