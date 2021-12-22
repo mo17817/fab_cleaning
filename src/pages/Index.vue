@@ -34,38 +34,39 @@
       <div class="row q-ma-sm" id="first-card">
         <!--first q-card-->
 
-        <q-card v-for="(value,key) in serviceCards.interiorDetailing" :key="key"
-        :class="value.class"
+        <q-card v-for="object in serviceCards.interiorDetailing" :key="object"
+        :class="object.class"
         flat bordered>
           <q-card-section horizontal>
             <q-card-section>
               <div class="col">
-                <h3 class="text-primary" align="center" id="first-para">
-                  What we offer
-                </h3>
+                  <h3 class="text-primary" align="center" id="first-para">
+                    {{object.header}}
+                  </h3>
                 <div class="col q-ma-sm" align="center">
-                  <q-avatar rounded size="70px">
-                    <q-img align="center" src="~assets/FABlogo.png" />
-                  </q-avatar>
+                    <q-avatar rounded size="70px">
+                      <q-img align="center" src="~assets/FABlogo.png" />
+                    </q-avatar>
                 </div>
+                
 
                 <q-separator horizontal color="yellow-7" />
                 <h6 class="text-primary text-weight-light" id="first-para">
-                  <h3>{{value.title}}</h3>
+                  <h3>{{object.title}}</h3>
                   <lb />
-                  {{value.process}}
+                  {{object.description}}
                 </h6>
                 <div class="col q-my-sm">
                   <q-img
                     class="col-3"
-                    :src="value.imgsrc1"
+                    :src="object.imgsrc1"
                     height="600px"
                   />
                 </div>
                 <div class="col q-my-sm">
                   <q-img
                     class="col-3"
-                    :src="value.imgsrc2"
+                    :src="object.imgsrc2"
                     height="600px"
                   />
                 </div>
@@ -135,7 +136,7 @@
       </q-page-scroller>
     </div>
     <div class="col" align="center">
-      <h1 class="text-white">Hear from our loyal patrons!</h1>
+      <h1 class="text-white" id="review-header">Hear from our loyal patrons!</h1>
       <Carousel3> </Carousel3>
 
       <!-- <Review></Review>
@@ -169,9 +170,10 @@ export default {
     return{
         serviceCards:{
            interiorDetailing: [{
-               
+              id: "Interior-Car",
+              header: "What we offer",
               title: "Interior Car Detailing",
-              process: "interior car detailing requires more effort and time than exterior detailing. A dirty interior cabin not only has a bad odor, but also adds to operational complications.Dirty air exhaust spreads allergens about the cabin; stain and grit causes switches to fail; and hazy windows can obscure the view of a driver. In that case, cleaning a car’s interior is more than just washing with water and soap.",
+              description: "interior car detailing requires more effort and time than exterior detailing. A dirty interior cabin not only has a bad odor, but also adds to operational complications.Dirty air exhaust spreads allergens about the cabin; stain and grit causes switches to fail; and hazy windows can obscure the view of a driver. In that case, cleaning a car’s interior is more than just washing with water and soap.",
               price: "350 dollars",
               class: "my-card bg-black",
               imgsrc1: [require("../assets/before1.jpeg")],
@@ -247,5 +249,10 @@ export default {
 #First-Object {
   size: 45px;
   color: "yellow";
+}
+@media screen and (max-width: 400px) {
+  #review-header{
+    font-size: x-large;
+  }
 }
 </style>
