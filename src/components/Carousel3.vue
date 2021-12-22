@@ -13,17 +13,17 @@
       dark
       class = "bg-black"
     >
-      <q-carousel-slide :name="1" rounded>
-        <q-card class="my-card bg-grey-10 text-primary" id="first-card-parent">
+      <q-carousel-slide :name="object.name" rounded v-for="object in carouselSlides" :key="object">
+        <q-card class="my-card bg-grey-10 text-primary" id="card-parent">
           <q-separator color="primary" />
             <q-card-actions vertical align="center">
               <q-avatar rounded>
                 <q-img src = "~assets/5-star.png"/>
               </q-avatar>
-              <h3 id="first-card">"We had a great experience at Fab Cleaning 5 stars!"</h3>
-              <h4 id="first-review-signature"
+              <h3 id="card">{{object.review}}</h3>
+              <h4 id="review-signature"
                 class="q-mt-sm"
-              >-Austin Hallett from Portland, ME</h4>
+              >{{object.signature}}</h4>
             
                 <q-btn class="bg-grey-8" align="center">
                     <q-icon name = "star_rate" color = "secondary"/>
@@ -32,36 +32,14 @@
                     <q-icon name = "star_rate" color = "secondary"/>
                     <q-icon name = "star_rate" color = "secondary"/>
                 </q-btn>
-              <h4 id="first-card-comment"> Let us know what you think!</h4>
-            </q-card-actions>
-          <q-separator color="primary" />
-        </q-card>
-      </q-carousel-slide>
-      <!--  -->
-      <q-carousel-slide :name="2">
-        <q-card class="my-card bg-grey-10 text-primary">
-          <q-separator color="primary" />
-            <q-card-actions vertical align="center">
-              <q-avatar rounded>
-                <q-img src = "~assets/5-star.png"/>
-              </q-avatar>
-              <h3>"We had a great experience at Fab Cleaning 5 stars!"</h3>
-            
-                <q-btn class="bg-grey-8" align="center">
-                    <q-icon name = "star_rate" color = "secondary"/>
-                    <q-icon name = "star_rate" color = "secondary"/>
-                    <q-icon name = "star_rate" color = "secondary"/>
-                    <q-icon name = "star_rate" color = "secondary"/>
-                    <q-icon name = "star_rate" color = "secondary"/>
-                </q-btn>
-              <h4> Let us know what you think!</h4>
+              <h4 id="card-comment"> Let us know what you think!</h4>
             </q-card-actions>
           <q-separator color="primary" />
         </q-card>
       </q-carousel-slide>
     </q-carousel>
   </template>
-<script lang='text/javascript'>
+<script>
 import { ref } from 'vue'
 
 export default {
@@ -72,36 +50,44 @@ export default {
     }
   },
   data(){
-  return{
-    carouselSlide1: {
-        "id": "first-slide",
-        "class": "my-card bg-grey-10 text-primary",
-        "review": "We had a great experience at Fab Cleaning 5 stars!",
-        "imgsrc": [require("../assets/5-star.png")],
-  },
-    carouselSlide2: {
-        "id": "second-slide",
-        "class": "my-card bg-grey-10 text-primary",
-        "review": "We had a great experience let us know what you think",
-        "imgsrc2": [require("../assets/5-star.png")],
-        "footer": "Let us know what you think!"
-        
+    return{
+        carouselSlides: [{
+        id: "first-slide",
+        name: 1,
+        review: "We had a great experience at Fab Cleaning 5 stars!",
+        signature: "Austin Hallett from Portland, ME",
+      },
+      {
+        id: "second-slide",
+        name: 2,
+        review: "I had a great experience, friendly staff. Would definitely come again!",
+        signature: "Mo from Portland, ME",
+            
+      }]
     }
-  }
-}
+  },
 }
 </script>
+
 <style lang="css">
 
-
+#card{
+  font-size: xx-large;
+}
+#card-comment{
+  font-size: medium;
+}
+#review-signature{
+  font-size: medium;
+}
 @media screen and (max-width: 400px) {
-  #first-card{
+  #card{
     font-size: large;
   }
-  #first-card-comment{
+  #card-comment{
     font-size: small;
   }
-  #first-review-signature{
+  #review-signature{
     font-size: small;
   }
   
