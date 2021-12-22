@@ -71,6 +71,24 @@ export default {
       autoplay: ref(true)
     }
   },
+  data(){
+  return{
+    carouselSlide1: [
+        id: {"first-slide"},
+        class: {"my-card bg-grey-10 text-primary"},
+        review: {"We had a great experience at Fab Cleaning 5 stars!"},
+        imgsrc: [require("~assets/5-star.png")],
+    ]
+    carouselSlide2: [
+        id: {"second-slide"},
+        class: {"my-card bg-grey-10 text-primary"},
+        review: {"We had a great experience let us know what you think"},
+        imgsrc2: [require("~assets/5-star.png")],
+        footer: {"Let us know what you think!"}
+        
+    ]
+  }
+}
 }
 </script>
 <style lang="css">
