@@ -66,9 +66,7 @@
                       </h5> 
                   </div>
                   <h6>
-                    we offer a series of different options if you decide to
-                    choose our gold tier membership as well as top class trim,
-                    top qaulity interior design
+                   {{value.description}}
                   </h6>
                   
                   <q-img
@@ -104,9 +102,7 @@
                     align="right"
                   />
                   <h6>
-                    we offer a series of different options if you decide to
-                    choose our gold tier membership as well as top class trim,
-                    top qaulity interior design
+                  {{value.description}}
                   </h6>
                   <div>
                     <h5> Book a service today 
