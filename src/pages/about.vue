@@ -82,12 +82,12 @@ border-radius: 10px;
 #about-me-car{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-}
+} 
 #pic-container {
   padding-left: 2vh;
   size: 100vh;
   flex-direction: column;
-}
+} 
 #card-actions-container {
   padding: 1%;
   margin-left: 0%;
