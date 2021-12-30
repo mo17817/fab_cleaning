@@ -11,12 +11,6 @@
   </head>
 
   <div class="q-pa-sm bg-black">
-    <!-- <button
-      @click="testEmailjs()"
-    >
-      Send Email
-    </button> -->
-    <q-btn> Test emailJS </q-btn>
     <div class="col q-pa-xs text-primary" align="center" id="breath-mint">
       <h2 id="breath-mint">Like a breath mint for the whip</h2>
     </div>
@@ -34,41 +28,36 @@
       <div class="row q-ma-sm" id="first-card">
         <!--first q-card-->
 
-        <q-card v-for="object in serviceCards.interiorDetailing" :key="object"
-        :class="object.class"
-        flat bordered>
+        <q-card
+          v-for="object in serviceCards.interiorDetailing"
+          :key="object"
+          :class="object.class"
+          flat
+          bordered
+        >
           <q-card-section horizontal>
             <q-card-section>
               <div class="col">
-                  <h3 class="text-primary" align="center" id="first-para">
-                    {{object.header}}
-                  </h3>
+                <h3 class="text-primary" align="center" id="first-para">
+                  {{ object.header }}
+                </h3>
                 <div class="col q-ma-sm" align="center">
-                    <q-avatar rounded size="70px">
-                      <q-img align="center" src="~assets/FABlogo.png" />
-                    </q-avatar>
+                  <q-avatar rounded size="70px">
+                    <q-img align="center" src="~assets/FABlogo.png" />
+                  </q-avatar>
                 </div>
-                
 
                 <q-separator horizontal color="yellow-7" />
                 <h6 class="text-primary text-weight-light" id="first-para">
-                  <h3>{{object.title}}</h3>
+                  <h3>{{ object.title }}</h3>
                   <lb />
-                  {{object.description}}
+                  {{ object.description }}
                 </h6>
                 <div class="col q-my-sm">
-                  <q-img
-                    class="col-3"
-                    :src="object.imgsrc1"
-                    height="600px"
-                  />
+                  <q-img class="col-3" :src="object.imgsrc1" height="600px" />
                 </div>
                 <div class="col q-my-sm">
-                  <q-img
-                    class="col-3"
-                    :src="object.imgsrc2"
-                    height="600px"
-                  />
+                  <q-img class="col-3" :src="object.imgsrc2" height="600px" />
                 </div>
               </div>
             </q-card-section>
@@ -89,12 +78,18 @@
     <!-- second card -->
     <div class="row q-ma-sm bg-secondary">
       <div class="row q-ma-sm" id="second-card">
-        <q-card v-for="objects in serviceCards.exteriorDetailing" :key="objects"   id = "Interior-Car" class="my-card bg-black" flat>
+        <q-card
+          v-for="objects in serviceCards.exteriorDetailing"
+          :key="objects"
+          id="Interior-Car"
+          class="my-card bg-black"
+          flat
+        >
           <q-card-section horizontal>
             <q-card-section>
               <div class="col-6">
                 <h6 class="text-primary" id="second-para">
-                  <h3 id = "Exterior-Car">{{objects.title}}</h3>
+                  <h3 id="Exterior-Car">{{ objects.title }}</h3>
                   <lb />
                   "Outer beauty is nothing compared to inner beauty. Therefore,
                   it comes as no surprise that interior car detailing requires
@@ -136,84 +131,63 @@
       </q-page-scroller>
     </div>
     <div class="col" align="center">
-      <h1 class="text-white" id="review-header">Hear from our loyal patrons!</h1>
+      <h1 class="text-white" id="review-header">
+        Hear from our loyal patrons!
+      </h1>
       <Carousel3> </Carousel3>
-
-      <!-- <Review></Review>
-      <Review></Review>
-      <Review></Review> -->
     </div>
-
-    <!--  -->
-    <!-- <form ref="form">
-      <input type="text" ref="name" placeholder="Name" />
-      <input type="text" ref="email" placeholder="Email" />
-    </form> -->
   </div>
 </template>
 
 <script>
 import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
-// import Review from "src/components/Review.vue";
 import Carousel3 from "components/Carousel3.vue";
-import emailjs from "emailjs-com";
-import Form from "components/Form.vue";
+
 export default {
-  components: { Carousel,  Carousel3},
+  components: { Carousel, Carousel3 },
   setup() {
     return {
       slide: ref(1),
     };
   },
-  data(){
-    return{
-        serviceCards:{
-           interiorDetailing: [{
-              id: "Interior-Car",
-              header: "What we offer",
-              title: "Interior Car Detailing",
-              description: "interior car detailing requires more effort and time than exterior detailing. A dirty interior cabin not only has a bad odor, but also adds to operational complications.Dirty air exhaust spreads allergens about the cabin; stain and grit causes switches to fail; and hazy windows can obscure the view of a driver. In that case, cleaning a car’s interior is more than just washing with water and soap.",
-              price: "350 dollars",
-              class: "my-card bg-black",
-              imgsrc1: [require("../assets/before1.jpeg")],
-              imgsrc2: [require("../assets/after1.jpeg")],
-                
-           } 
+  data() {
+    return {
+      serviceCards: {
+        interiorDetailing: [
+          {
+            id: "Interior-Car",
+            header: "What we offer",
+            title: "Interior Car Detailing",
+            description:
+              "interior car detailing requires more effort and time than exterior detailing. A dirty interior cabin not only has a bad odor, but also adds to operational complications.Dirty air exhaust spreads allergens about the cabin; stain and grit causes switches to fail; and hazy windows can obscure the view of a driver. In that case, cleaning a car’s interior is more than just washing with water and soap.",
+            price: "350 dollars",
+            class: "my-card bg-black",
+            imgsrc1: [require("../assets/before1.jpeg")],
+            imgsrc2: [require("../assets/after1.jpeg")],
+          },
         ],
-
-           exteriorDetailing: [{
-              
-              id: "Exterior-Car",
-              title: "Exterior Car Detailing",
-              description: "Exterior car detailing is not just a quick wash of the exterior components of a car. A good car detailer will make the car gleam, minimize surface scratches, and should always apply a shielding paint sealant",  
-              class: "my-card bg-black",
-              imgsrc1: [require("../assets/before4.jpeg")],
-              imgsrc2: [require("../assets/after17.jpeg")],
-            }
-          ]
-        }
-    }
+        exteriorDetailing: [
+          {
+            id: "Exterior-Car",
+            title: "Exterior Car Detailing",
+            description:
+              "Exterior car detailing is not just a quick wash of the exterior components of a car. A good car detailer will make the car gleam, minimize surface scratches, and should always apply a shielding paint sealant",
+            class: "my-card bg-black",
+            imgsrc1: [require("../assets/before4.jpeg")],
+            imgsrc2: [require("../assets/after17.jpeg")],
+          },
+        ],
+      },
+    };
   },
 
   methods: {
-
-    testEmailjs() {
-      alert("function called");
-
-      emailjs.send("service_pymn93q", "template_enk29gg", this.ref.form , "user_2PwSHZeOnQt3MqFWKqaKx")
-            .then((result) => {
-                console.log(result);
-            }, (error) => {
-                console.log(error);
-            });
-    },
-
     prev() {
-    this.slide.value--;
+      this.slide.value--;
+    },
   },
-},
-}
+};
 </script>
 
 <style>
@@ -251,7 +225,7 @@ export default {
   color: "yellow";
 }
 @media screen and (max-width: 400px) {
-  #review-header{
+  #review-header {
     font-size: x-large;
   }
 }
