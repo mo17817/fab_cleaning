@@ -15,124 +15,96 @@
       rel="stylesheet"
     />
   </head>
-      <div class="q-pa-sm bg-black">
-          <div
-            class="col q-pa-xs bg-transparent text-primary"
-            align="center"
-            id="breath-mint"
-          >
-            <h2 id = "our-services">Our Services</h2>
+  <div class="q-pa-sm bg-black">
+    <div
+      class="col q-pa-xs bg-transparent text-primary"
+      align="center"
+      id="breath-mint"
+    >
+      <h2 id="our-services">Our Services</h2>
+    </div>
+    <div class="q-gutter-md">
+      <div class="row justify-between">
+        <q-parallax src="~assets/cleaning4.jpeg">
+          <div align="center">
+            <h2 id="tier-header" class="text-white">There's levels to this</h2>
           </div>
-          <div class="q-gutter-md">
-            <div class="row justify-between">
-              <q-parallax src="~assets/cleaning4.jpeg">
-                <h1 class="text-white">Tiers</h1>
-              </q-parallax>
-            </div>
-            <q-separator />
-
-            
-            <!--card section-->
-            <q-card v-for="(value, key) in cardList.reverse()" :key="key">
-            
-          <!-- silver tier conditional -->
-          <div v-if="key % 2 !== 0">
-            <q-card
-                :class="value.class"
-                flat
-                bordered
-                height="250px"
-                id="tier"
-              >
-
-                <div
-                  class="col justify-content-center"
-                  align="center"
-
-                >
-                  {{value.title}} <q-icon name="military_tech" size="35px" />
-                </div>
-                <q-card-section horizontal id="img-title" align="center">
-                  <div>
-                    <h5> Book a service today 
-                      <q-btn 
-                        id="booking"
-                        value="gold"
-                        label="Book gold tier service"
-                        hint = "Email and Phone number required"
-                        :color="value.color"
-                        @click="tierButton(this.value='Gold')"
-                        />
-                      </h5> 
-                  </div>
-                  <h6>
-                   {{value.description}}
-                  </h6>
-                  
-                  <q-img
-                    class="col-5"
-                    :src="value.imgsrc"
-                    id="img"
-                    align="right"
-                  />
-                </q-card-section>
-            </q-card>
-          </div>
-          <!-- other tiers (gold, bronze) -->
-          <div v-else>
-            <q-card
-                :class="value.class"
-                flat
-                bordered
-                height="250px"
-                id="tier"
-              >
-
-                <div
-                  class="col justify-content-center"
-                  align="center"
-                >
-                  {{value.title}} <q-icon name="military_tech" size="35px" />
-                </div>
-                <q-card-section horizontal id="img-title" align="center">
-                  <q-img
-                    class="col-5"
-                    :src="value.imgsrc"
-                    id="img"
-                    align="right"
-                  />
-                  <h6>
-                  {{value.description}}
-                  </h6>
-                  <div>
-                    <h5> Book a service today 
-                      <q-btn 
-                        id="booking"
-                        value="gold"
-                        label="Book gold tier service"
-                        hint = "Email and Phone number required"
-                        :color="value.color"
-                        @click="tierButton(this.value='Gold')"
-                        />
-                      </h5> 
-                  </div>
-                </q-card-section>
-              </q-card>
-          </div>
-           
-        </q-card>
-
-
-            <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
-              <q-btn fab icon="keyboard_arrow_up" color="accent" />
-            </q-page-scroller>
-          </div>
-      <q-dialog v-model="dialog">
-        <Form
-          :tier="value"
-        ></Form>
-      </q-dialog>
+        </q-parallax>
       </div>
+      <q-separator />
+
+      <!--card section-->
+      <!-- REMOVE .reverse() method to fix re-render on button click -->
+      <q-card v-for="(value, key) in cardList" :key="key">
+        <!-- silver tier conditional -->
+        <div v-if="key % 2 !== 0">
+          <q-card :class="value.class" flat bordered height="250px" id="tier">
+            <div class="col justify-content-center" align="center">
+              {{ value.title }} <q-icon name="military_tech" size="35px" />
+            </div>
+            <q-card-section horizontal id="img-title" align="center">
+              <div>
+                <h5>
+                  Book a service today
+                  <q-btn
+                    id="booking"
+                    value="gold"
+                    :label="value.btn"
+                    hint="Email and Phone number required"
+                    :color="value.color"
+                    @click="tierButton((this.value = value.title))"
+                  />
+                </h5>
+              </div>
+              <h6>
+                {{ value.description }}
+              </h6>
+
+              <q-img class="col-5" :src="value.imgsrc" id="img" align="right" />
+            </q-card-section>
+          </q-card>
+        </div>
+        <!-- other tiers (gold, bronze) -->
+        <div v-else>
+          <q-card :class="value.class" flat bordered height="250px" id="tier">
+            <div class="col justify-content-center" align="center">
+              {{ value.title }} <q-icon name="military_tech" size="35px" />
+            </div>
+            <q-card-section horizontal id="img-title" align="center">
+              <q-img class="col-5" :src="value.imgsrc" id="img" align="right" />
+              <h6>
+                {{ value.description }}
+              </h6>
+              <div>
+                <h5>
+                  Book a service today
+                  <q-btn
+                    id="booking"
+                    value="gold"
+                    :label="value.btn"
+                    hint="Email and Phone number required"
+                    :color="value.color"
+                    @click="tierButton((this.value = value.title))"
+                  />
+                </h5>
+              </div>
+            </q-card-section>
+          </q-card>
+        </div>
+      </q-card>
+
+      <q-page-scroller
+        position="bottom-right"
+        :scroll-offset="150"
+        :offset="[18, 18]"
+      >
+        <q-btn fab icon="keyboard_arrow_up" color="accent" />
+      </q-page-scroller>
+    </div>
+    <q-dialog v-model="dialog">
+      <Form :tier="value"></Form>
+    </q-dialog>
+  </div>
 </template>
 <script>
 import { ref } from "vue";
@@ -141,55 +113,61 @@ import { Parallax } from "components/Parallax.vue";
 import Form from "components/Form.vue";
 
 export default {
-  components: {Form},
+  components: { Form },
   setup() {
     return {
       dialog: ref(false),
       tier: ref("Gold"),
-      value:"",
+      value: "",
     };
   },
-  data(){
-    return{
+  data() {
+    return {
       cardList: [
         {
           id: "bronze",
-          title: "Bronze", 
-          description: "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design", 
+          title: "Bronze",
+          btn: "Book Bronze tier service",
+          description:
+            "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
           class: "my-card bg-black text-brown-7",
           color: "brown-7",
-          imgsrc: [require("../assets/bronzetier.png")]
+          imgsrc: [require("../assets/bronzetier.png")],
         },
         {
           id: "silver",
-          title: "Silver", 
-          description: "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design", 
+          title: "Silver",
+          btn: "Book Silver tier service",
+          description:
+            "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
           class: "my-card bg-black text-grey-13",
           color: "grey-13",
-          imgsrc: [require("../assets/silvertier.png")]
+          imgsrc: [require("../assets/silvertier.png")],
         },
         {
           id: "gold",
           title: "Gold",
-          description: "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
+          btn: "Book Gold tier service",
+          description:
+            "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
           class: "my-card bg-black text-primary",
           color: "primary",
-          imgsrc: [require("../assets/goldtier.png")]
+          imgsrc: [require("../assets/goldtier.png")],
         },
-        
-        
-
-      ]
-    }
+      ],
+    };
   },
   methods: {
     tierButton: function (button) {
       this.dialog = true;
     },
   },
-}
+};
 </script>
 <style>
+#tier-header {
+  font-family: "Lobster";
+}
 #title {
   font-family: "Lobster", cursive;
   font-size: 35px;
@@ -202,7 +180,7 @@ export default {
   /* position: relative; */
   /* z-index: 1; */
 }
-#tier{
+#tier {
   align-self: right;
   font-size: 40px;
   font-family: Raleway, serif;
