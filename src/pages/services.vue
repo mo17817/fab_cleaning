@@ -35,16 +35,16 @@
 
       <!--card section-->
       <!-- REMOVE .reverse() method to fix re-render on button click -->
-      <q-card v-for="(value, key) in cardList" :key="key">
+      <q-card v-for="(value, key) in cardList" :key="key" id ="cards">
         <!-- silver tier conditional -->
         <div v-if="key % 2 !== 0">
           <q-card :class="value.class" flat bordered height="250px" id="tier">
-            <div class="col justify-content-center" align="center">
+            <div class="col justify-content-center" align="center" id = "card-title">
               {{ value.title }} <q-icon name="military_tech" size="35px" />
             </div>
             <q-card-section horizontal id="img-title" align="center">
               <div>
-                <h5>
+                <h5 id = "booking-title">
                   Book a service today
                   <q-btn
                     id="booking"
@@ -56,7 +56,7 @@
                   />
                 </h5>
               </div>
-              <h6>
+              <h6 id = "description">
                 {{ value.description }}
               </h6>
 
@@ -67,16 +67,16 @@
         <!-- other tiers (gold, bronze) -->
         <div v-else>
           <q-card :class="value.class" flat bordered height="250px" id="tier">
-            <div class="col justify-content-center" align="center">
+            <div class="col justify-content-center" align="center" id = "card-title">
               {{ value.title }} <q-icon name="military_tech" size="35px" />
             </div>
             <q-card-section horizontal id="img-title" align="center">
               <q-img class="col-5" :src="value.imgsrc" id="img" align="right" />
-              <h6>
+              <h6 id = "description">
                 {{ value.description }}
               </h6>
               <div>
-                <h5>
+                <h5 id = "booking-title">
                   Book a service today
                   <q-btn
                     id="booking"
@@ -206,5 +206,35 @@ export default {
 }
 #booking {
   position: inline;
+}
+/* #cards {
+  contain: inline; 
+} */
+@media screen and (max-width: 400px) {
+  #cards{
+    position: flex;
+    width: 359px;
+    grid-template-columns: 2fr 1fr;
+  }
+  #img{
+    size: small;
+    position: flex;
+  }
+  #description{
+    font-size: small;
+    font-weight: bold;
+  }
+  #booking-title{
+    font-size: small;
+    font-weight: bold;
+  }
+  #booking{
+    font-size: small;
+    font-weight: bold;
+  }
+  #card-title{
+    font-size: xx-large;
+    font-weight: bold;
+  }
 }
 </style>
