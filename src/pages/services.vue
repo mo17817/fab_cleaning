@@ -27,7 +27,7 @@
       <div class="row justify-between">
         <q-parallax src="~assets/cleaning4.jpeg">
           <div align="center">
-            <h2 id="tier-header" class="text-white">There's levels to this</h2>
+            <h2 id="tier-header" class="text-black">There's levels to this</h2>
           </div>
         </q-parallax>
       </div>
@@ -150,8 +150,8 @@ export default {
           btn: "Book Gold tier service",
           description:
             "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
-          class: "my-card bg-black text-primary",
-          color: "primary",
+          class: "my-card bg-black text-yellow-4",
+          color: "yellow-4",
           imgsrc: [require("../assets/goldtier.png")],
         },
       ],
@@ -208,7 +208,7 @@ export default {
   position: inline;
 }
 /* #cards {
-  contain: inline; 
+  contain: inline;
 } */
 @media screen and (max-width: 400px) {
   #cards{

@@ -24,9 +24,9 @@
               <h4 id="review-signature"
                 class="q-mt-sm"
               >{{object.signature}}</h4>
-            
+
                 <q-btn class="bg-grey-8" align="center">
-                    <q-icon name = "star_rate" color = "secondary"/>
+                    <q-icon name = "star_rate" color = "primary"/>
                     <q-icon name = "star_rate" color = "secondary"/>
                     <q-icon name = "star_rate" color = "secondary"/>
                     <q-icon name = "star_rate" color = "secondary"/>
@@ -62,7 +62,7 @@ export default {
         name: 2,
         review: "I had a great experience, friendly staff. Would definitely come again!",
         signature: "Mo from Portland, ME",
-            
+
       }]
     }
   },
@@ -90,9 +90,9 @@ export default {
   #review-signature{
     font-size: small;
   }
-  
+
 }
 @media screen {
-  
+
 }
 </style>

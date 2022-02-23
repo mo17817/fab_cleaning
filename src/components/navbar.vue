@@ -4,21 +4,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet"/>
   </head>
-  <q-header>
-    <q-toolbar class="bg-black" id="navbar">
-        <div class="col-3">
+  <q-header id = "title-container">
+    <q-toolbar class="glossy" id="navbar">
+        <div class="col-3" id = "title-container">
           <q-avatar size="56px" class="q-my-sm">
             <img src="~assets/FABlogo.png" alt="Fab Logo" id="logo"/>
           </q-avatar>
         </div>
         <div class="col">
-          <div class="text-primary text-center" id="title">
+          <div class="text-black text-center" id="title">
                 FAB Cleaning
           </div>
         </div>
         <div class="col-3 text-primary" align="right">
-          
-          <q-btn icon="menu">
+
+          <q-btn icon="menu" class = "bg-black">
             <q-menu class="bg-black">
               <q-list align="center">
                 <q-item class="text-primary">
@@ -29,7 +29,7 @@
                     Home
                   </q-btn>
                   </div>
-                  
+
                 </q-item>
                 <q-item>
                 <div class="col">
@@ -46,11 +46,11 @@
                 <div class="col">
                   <q-btn
                   class="text-primary"
-                  flat 
+                  flat
                   to = "/about"
                   value="About"
                   >
-                  About Me 
+                  About Me
                   </q-btn>
                 </div>
               </q-item>
@@ -88,11 +88,11 @@
                 <div class="col">
                   <q-btn
                   class="text-primary"
-                  flat 
+                  flat
                   to = "/about"
                   value="About"
                   >
-                  About Me 
+                  About Me
                   </q-btn>
                 </div>
               </q-item>
@@ -105,8 +105,29 @@
 </template>
 
 <style lang="css" scoped>
+#navbar{
+background: #4B5320;
+color: #2D3502;
+background: linear-gradient(to bottom, #4B5320 0%, #3C4411 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B5320), color-stop(100%, #3C4411));
+background: -webkit-linear-gradient(top, #4B5320 0%, #3C4411 100%);
+background: -moz-linear-gradient(top, #4B5320 0%, #3C4411 100%);
+background: -o-linear-gradient(top, #4B5320 0%, #3C4411 100%);
+background: -ms-linear-gradient(top, #4B5320 0%, #3C4411 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+border: 1px solid #2D3502;
+text-shadow: 0 1px 0 #5A622F;
+-webkit-text-shadow: 0 1px 0 #5A622F;
+-moz-text-shadow: 0 1px 0 #5A622F;
+box-shadow: inset 0 1px 0 #5A622F;
+-webkit-box-shadow: inset 0 1px 0 #5A622F;
+-moz-box-shadow: inset 0 1px 0 #5A622F;
+}
 #title{
   font-size: xxx-large;
+  font-family: "Lobster";
+  font-weight: lighter;
+
 }
 @media screen and (max-width: 400px) {
   #title{

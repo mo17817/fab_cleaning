@@ -1,12 +1,12 @@
 <template>
-    <q-card class="my-card bg-grey-10 text-primary" rounded>
+    <q-card class="my-card bg-grey-10 text-black" rounded>
       <q-separator color="primary" inset />
       <q-card-actions vertical align="center">
         <q-avatar rounded>
           <q-img src = "~assets/5-star.png"/>
         </q-avatar>
         <h3>"We had a great experience at Fab Cleaning 5 stars! {{review.name}}"</h3>
-      
+
           <q-btn class="bg-grey-8" align="center">
               <q-icon name = "star_rate" color = "secondary"/>
               <q-icon name = "star_rate" color = "secondary"/>

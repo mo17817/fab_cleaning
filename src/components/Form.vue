@@ -72,7 +72,7 @@
         <q-btn
           label="Reset"
           type="reset"
-          color="primary"
+          color="yellow-4"
           flat
           class="q-ml-sm"
         />
