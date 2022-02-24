@@ -12,7 +12,7 @@
           </q-avatar>
         </div>
         <div class="col">
-          <div class="text-black text-center" id="title">
+          <div class="text-accent text-center" id="title">
                 FAB Cleaning
           </div>
         </div>
