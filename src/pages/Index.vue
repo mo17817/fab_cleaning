@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap"
       rel="stylesheet"
     />
+    <!-- Poppins font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
 
   <div class="q-pa-sm bg-black">
@@ -230,7 +234,8 @@ export default {
   object-fit: fill;
 }
 #cleaning{
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   display: flex;
   max-width: 700px;
   background: #4b5320;
@@ -258,7 +263,8 @@ export default {
   object-fit: contain;
 }
 #tint{
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
   display: flex;
   max-width: 700px;
   background: #242711;
@@ -362,13 +368,15 @@ export default {
   font-weight: 600;
 }
 #title {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Poppins', sans-serif;
+
   font-size: 50px;
-  /* font-weight: bold; */
+  font-weight: bold;
   /* position:sticky; */
 }
 #breath-mint {
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
+  /* font-weight: bold; */
   font-size: 30px;
   background: #4b5320;
   color: #2d3502;
@@ -403,11 +411,11 @@ export default {
   font-weight: 500;
 }
 #first-para {
-  font-family: "Exo 2", sans-serif;
-  font-weight: bold;
+ font-family: 'Poppins', sans-serif;
+ font-weight: bolder;
 }
 #second-para {
-  font-family: "Exo 2", sans-serif;
+ font-family: 'Poppins', sans-serif;
   font-size: 15px;
   background: #4b5320;
   color: #2d3502;
@@ -471,6 +479,7 @@ export default {
     align-content: center;
     size: 100px;
     display: inline-flex;
+    margin-top: 15px;
   }
   #cleaning{
     padding: 1px;
@@ -480,6 +489,7 @@ export default {
     align-content: center;
     size: 100px;
     display: inline-flex;
+    margin-top: 15px;
   }
 }
 </style>
