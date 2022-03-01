@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -20,15 +20,19 @@
 
   <div class="q-pa-sm bg-black">
     <div class="col q-pa-xs bg-black" align="center" id="breath-mint">
-      <h2 id = "breath-mint-text" class = "text-primary">Like a breath mint for the whip</h2>
+      <h2 id="breath-mint-text" class="text-primary">
+        Like a breath mint for the whip
+      </h2>
     </div>
 
     <div id="carousel-container">
       <div class="col" id="text-container"></div>
 
       <q-separator color="black" size="8px" />
-
-      <carousel></carousel>
+        <div class="row justify-between">
+        <q-parallax id = "parallax" src="~assets/cleaning4.jpeg">
+        </q-parallax>
+        </div>
     </div>
     <q-separator color="black" size="8px" />
     <!-- first card -->
@@ -42,7 +46,7 @@
           :class="object.class"
           flat
           bordered
-          id = "card"
+          id="card"
         >
           <q-card-section horizontal>
             <q-card-section>
@@ -75,76 +79,70 @@
       </div>
 
       <!--page scroller-->
-      <q-page-scroller
+      <!-- <q-page-scroller
         position="bottom-right"
         :scroll-offset="200"
         :offset="[18, 18]"
       >
         <q-btn fab icon="keyboard_arrow_up" color="primary" />
-      </q-page-scroller>
+      </q-page-scroller> -->
     </div>
 
-    <!-- second card -->
-    <div class="row q-ma-sm bg-black text-primary">
-      <div class="row q-ma-sm bg-black text-primary" id="second-card">
+      <!-- third card -->
+      <div class="flex flex-center q-pa-sm" id="first-card">
         <q-card
-          v-for="objects in serviceCards.exteriorDetailing"
-          :key="objects"
-          id="Interior-Car"
-          class="my-card bg-black text-primary"
+          v-for="object in serviceCards.ceramicCoating"
+          :key="object"
+          :class="object.class"
           flat
+          bordered
+          :id="object.id"
         >
+        <q-space />
           <q-card-section horizontal>
-            <q-card-section>
-              <div class="col-6 bg-black" id = "second-para">
-                <h6 class="text-primary">
-                  <h3 id="Exterior-Car">{{ objects.title }}</h3>
+            <q-card-section align ="center">
+              <div class="col">
+                <h3 class="text-black" align="center" id="first-para">
+                <q-btn hint="click for more" :to="object.to" class = "bg-accent" rounded bordered size ="25px">
+                  {{ object.title }}
+                </q-btn>
+                </h3>
+                <div class="col q-ma-sm" align="center">
+                </div>
+
+                <q-separator horizontal color="primary" />
+                <h6 class="text-weight-heavy" id="first-para">
                   <lb />
-                  "Outer beauty is nothing compared to inner beauty. Therefore,
-                  it comes as no surprise that interior car detailing requires
-                  more effort and time than exterior detailing. A dirty interior
-                  cabin not only has a bad odor, but also adds to operational
-                  complications. Dirty air exhaust spreads allergens about the
-                  cabin; stain and grit causes switches to fail; and hazy
-                  windows can obscure the view of a driver. In that case,
-                  cleaning a car’s interior is more than just washing with water
-                  and soap."
+                  {{ object.description }}
                 </h6>
                 <div class="col q-my-sm">
-                  <q-img
-                    class="col-3"
-                    src="~assets/before4.jpeg"
-                    height="350px"
-                  />
-                </div>
-                <div class="col q-my-sm">
-                  <q-img
-                    class="col-3"
-                    src="~assets/after17.jpeg"
-                    height="350px"
-                  />
+                  <q-space />
+                  <q-parallax>
+                    <template v-slot:media>
+                      <img :src="object.img" />
+                    </template>
+                  <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
+                  </q-parallax>
                 </div>
               </div>
             </q-card-section>
           </q-card-section>
         </q-card>
       </div>
-
-      <!--page scroller-->
-      <q-page-scroller
-        position="bottom-right"
-        :scroll-offset="200"
-        :offset="[18, 18]"
-      >
-        <q-btn fab icon="keyboard_arrow_up" color="primary" />
-      </q-page-scroller>
-    </div>
-    <div class="col" align="center" style = "font-family:'Exo 2', sans-serif">
-      <h1 class="text-primary" id="review-header">
-        Hear from our loyal patrons!
-      </h1>
-      <Carousel3> </Carousel3>
-    </div>
+    <!--page scroller-->
+    <q-page-scroller
+      position="bottom-right"
+      :scroll-offset="200"
+      :offset="[18, 18]"
+    >
+      <q-btn fab icon="keyboard_arrow_up" color="primary" />
+    </q-page-scroller>
+  </div>
+  <div class="col" align="center" style="font-family: 'Exo 2', sans-serif">
+    <h1 class="text-primary" id="review-header">
+      Hear from our loyal patrons!
+    </h1>
+    <Carousel3> </Carousel3>
   </div>
 </template>
 
@@ -152,9 +150,10 @@
 import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
 import Carousel3 from "components/Carousel3.vue";
+import Parallax from "components/Parallax.vue"
 
 export default {
-  components: { Carousel, Carousel3 },
+  components: { Carousel3, },
   setup() {
     return {
       slide: ref(1),
@@ -179,12 +178,39 @@ export default {
         exteriorDetailing: [
           {
             id: "Exterior-Car",
-            title: "Exterior Car Detailing",
+            title: "Auto-Detailing",
             description:
               "Exterior car detailing is not just a quick wash of the exterior components of a car. A good car detailer will make the car gleam, minimize surface scratches, and should always apply a shielding paint sealant",
             class: "my-card",
             imgsrc1: [require("../assets/before4.jpeg")],
             imgsrc2: [require("../assets/after17.jpeg")],
+          },
+        ],
+        ceramicCoating: [
+          {
+            id: "ceramics",
+            title: "Ceramic-Coating",
+            description:
+              "Ceramic coating for your car and all your glossy needs",
+            class: "my-card q-ma-lg q-pa-xl text-black",
+            img: [require("../assets/Ceramics.jpg")],
+            to: "src/pages/ceramic"
+          },
+           {
+            id:"tint",
+            title: "Tinting Services",
+            description: "Tinting servcies offered as well",
+            class: "my-card q-ma-lg q-pa-xl bg-dark text-primary",
+            img: [require("../assets/bmw.jpg")],
+            to: "src/pages/tints",
+          },
+          {
+            id: "cleaning",
+            title: "Cleaning Services",
+            description: "Get the best cleaning in town",
+            class: "my-card q-ma-lg q-pa-xl text-black",
+            img: [require("../assets/cleaning207.jpg")],
+            to: "src/pages/cleaning",
           },
         ],
       },
@@ -200,42 +226,140 @@ export default {
 </script>
 
 <style>
-#card{
-  background: #4B5320;
-color: #2D3502;
-background: linear-gradient(to bottom, #4B5320 0%, #3C4411 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B5320), color-stop(100%, #3C4411));
-background: -webkit-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -moz-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -o-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -ms-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-border: 1px solid #2D3502;
-text-shadow: 0 1px 0 #5A622F;
--webkit-text-shadow: 0 1px 0 #5A622F;
--moz-text-shadow: 0 1px 0 #5A622F;
-box-shadow: inset 0 1px 0 #5A622F;
--webkit-box-shadow: inset 0 1px 0 #5A622F;
--moz-box-shadow: inset 0 1px 0 #5A622F;
+#parallax{
+  object-fit: fill;
 }
-#Interior-Car{
-  background: #4B5320;
-color: #2D3502;
-background: linear-gradient(to bottom, #4B5320 0%, #3C4411 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B5320), color-stop(100%, #3C4411));
-background: -webkit-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -moz-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -o-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -ms-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-border: 1px solid #2D3502;
-text-shadow: 0 1px 0 #5A622F;
--webkit-text-shadow: 0 1px 0 #5A622F;
--moz-text-shadow: 0 1px 0 #5A622F;
-box-shadow: inset 0 1px 0 #5A622F;
--webkit-box-shadow: inset 0 1px 0 #5A622F;
--moz-box-shadow: inset 0 1px 0 #5A622F;
-font-weight: 600;
+#cleaning{
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  max-width: 700px;
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+  object-fit: contain;
+}
+#tint{
+  font-family: "Exo 2", sans-serif;
+  display: flex;
+  max-width: 700px;
+  background: #242711;
+  color: #708015;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+  object-fit: fill;
+
+}
+#ceramics {
+  max-width: 700px;
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+  object-fit: contain ;
+}
+#card {
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+}
+#Interior-Car {
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+  font-weight: 600;
 }
 #title {
   font-family: "Exo 2", sans-serif;
@@ -246,55 +370,67 @@ font-weight: 600;
 #breath-mint {
   font-family: "Exo 2", sans-serif;
   font-size: 30px;
-  background: #4B5320;
-color: #2D3502;
-background: linear-gradient(to bottom, #4B5320 0%, #3C4411 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B5320), color-stop(100%, #3C4411));
-background: -webkit-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -moz-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -o-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -ms-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-border: 1px solid #2D3502;
-text-shadow: 0 1px 0 #5A622F;
--webkit-text-shadow: 0 1px 0 #5A622F;
--moz-text-shadow: 0 1px 0 #5A622F;
-box-shadow: inset 0 1px 0 #5A622F;
--webkit-box-shadow: inset 0 1px 0 #5A622F;
--moz-box-shadow: inset 0 1px 0 #5A622F;
-font-weight: bold;
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+  font-weight: bold;
 
   /* position: fixed; */
   /* font-weight: initial; */
 }
-#breath-mint-text{
+#breath-mint-text {
   font-size: 30px;
   font-style: italic;
   font-weight: 500;
 }
 #first-para {
   font-family: "Exo 2", sans-serif;
-
+  font-weight: bold;
 }
 #second-para {
   font-family: "Exo 2", sans-serif;
   font-size: 15px;
-    background: #4B5320;
-color: #2D3502;
-background: linear-gradient(to bottom, #4B5320 0%, #3C4411 100%);
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4B5320), color-stop(100%, #3C4411));
-background: -webkit-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -moz-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -o-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-background: -ms-linear-gradient(top, #4B5320 0%, #3C4411 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-border: 1px solid #2D3502;
-text-shadow: 0 1px 0 #5A622F;
--webkit-text-shadow: 0 1px 0 #5A622F;
--moz-text-shadow: 0 1px 0 #5A622F;
-box-shadow: inset 0 1px 0 #5A622F;
--webkit-box-shadow: inset 0 1px 0 #5A622F;
--moz-box-shadow: inset 0 1px 0 #5A622F;
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
 }
 #second-card {
   margin: 7px;
@@ -310,12 +446,40 @@ box-shadow: inset 0 1px 0 #5A622F;
   size: 45px;
   color: "yellow";
 }
-#Exterior-Car{
+#Exterior-Car {
   font-weight: 500;
 }
+
 @media screen and (max-width: 400px) {
   #review-header {
     font-size: x-large;
+  }
+  #ceramics{
+    padding: 1px;
+    margin: 1px;
+    font-size: small;
+    object-fit: contain;
+    align-content: center;
+    size: 100px;
+    display: inline-flex;
+  }
+  #tint{
+    padding: 1px;
+    margin: 1px;
+    font-size: small;
+    object-fit: contain;
+    align-content: center;
+    size: 100px;
+    display: inline-flex;
+  }
+  #cleaning{
+    padding: 1px;
+    margin: 1px;
+    font-size: small;
+    object-fit: contain;
+    align-content: center;
+    size: 100px;
+    display: inline-flex;
   }
 }
 </style>
