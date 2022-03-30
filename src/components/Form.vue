@@ -88,7 +88,7 @@ export default {
   props: {
     tier: {
       type: String,
-      default: "Default prop value",
+      default: "check out our rates",
     },
     color: {
       type: String,

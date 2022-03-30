@@ -17,9 +17,12 @@
       rel="stylesheet"
     />
     <!-- Poppins font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <div class="q-pa-sm bg-black">
@@ -33,10 +36,9 @@
       <div class="col" id="text-container"></div>
 
       <q-separator color="black" size="8px" />
-        <div class="row justify-between">
-        <q-parallax id = "parallax" src="~assets/cleaning4.jpeg">
-        </q-parallax>
-        </div>
+      <div class="row justify-between">
+        <q-parallax id="parallax" src="~assets/cleaning4.jpeg"> </q-parallax>
+      </div>
     </div>
     <q-separator color="black" size="8px" />
     <!-- first card -->
@@ -92,47 +94,54 @@
       </q-page-scroller> -->
     </div>
 
-      <!-- third card -->
-      <div class="flex flex-center q-pa-sm" id="first-card">
-        <q-card
-          v-for="object in serviceCards.ceramicCoating"
-          :key="object"
-          :class="object.class"
-          flat
-          bordered
-          :id="object.id"
-        >
+    <!-- third card -->
+    <div class="flex flex-center q-pa-sm" id="first-card">
+      <q-card
+        v-for="object in serviceCards.ceramicCoating"
+        :key="object"
+        :class="object.class"
+        flat
+        bordered
+        :id="object.id"
+      >
         <q-space />
-          <q-card-section horizontal>
-            <q-card-section align ="center">
-              <div class="col">
-                <h3 class="text-black" align="center" id="first-para">
-                <q-btn hint="click for more" :to="object.to" class = "bg-accent" rounded bordered size ="25px">
+        <q-card-section horizontal>
+          <q-card-section align="center">
+            <div class="col">
+              <h3 class="text-black" align="center" id="first-para">
+                <q-btn
+                  id="button"
+                  hint="click for more"
+                  :to="object.to"
+                  class="bg-accent"
+                  rounded
+                  bordered
+                  size="25px"
+                >
                   {{ object.title }}
                 </q-btn>
-                </h3>
-                <div class="col q-ma-sm" align="center">
-                </div>
+              </h3>
+              <div class="col q-ma-sm" align="center"></div>
 
-                <q-separator horizontal color="primary" />
-                <h6 class="text-weight-heavy" id="first-para">
-                  <lb />
-                  {{ object.description }}
-                </h6>
-                <div class="col q-my-sm">
-                  <q-space />
-                  <q-parallax>
-                    <template v-slot:media>
-                      <img :src="object.img" />
-                    </template>
+              <q-separator horizontal color="primary" />
+              <h6 class="text-weight-heavy" id="first-para">
+                <lb />
+                {{ object.description }}
+              </h6>
+              <div class="col q-my-sm">
+                <q-space />
+                <q-parallax>
+                  <template v-slot:media>
+                    <img :src="object.img" />
+                  </template>
                   <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
-                  </q-parallax>
-                </div>
+                </q-parallax>
               </div>
-            </q-card-section>
+            </div>
           </q-card-section>
-        </q-card>
-      </div>
+        </q-card-section>
+      </q-card>
+    </div>
     <!--page scroller-->
     <q-page-scroller
       position="bottom-right"
@@ -142,22 +151,22 @@
       <q-btn fab icon="keyboard_arrow_up" color="primary" />
     </q-page-scroller>
   </div>
-  <div class="col" align="center" style="font-family: 'Exo 2', sans-serif">
+  <!-- <div class="col" align="center" style="font-family: 'Exo 2', sans-serif">
     <h1 class="text-primary" id="review-header">
       Hear from our loyal patrons!
     </h1>
     <Carousel3> </Carousel3>
-  </div>
+  </div> -->
 </template>
 
 <script>
 import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
 import Carousel3 from "components/Carousel3.vue";
-import Parallax from "components/Parallax.vue"
+import Parallax from "components/Parallax.vue";
 
 export default {
-  components: { Carousel3, },
+  components: {  },
   setup() {
     return {
       slide: ref(1),
@@ -193,28 +202,20 @@ export default {
         ceramicCoating: [
           {
             id: "ceramics",
-            title: "Ceramic-Coating",
+            title: "Exterior-Detailing",
             description:
               "Ceramic coating for your car and all your glossy needs",
             class: "my-card q-ma-lg q-pa-xl text-black",
             img: [require("../assets/Ceramics.jpg")],
-            to: "src/pages/ceramic"
+            to: "src/pages/ceramic",
           },
-           {
-            id:"tint",
+          {
+            id: "tint",
             title: "Tinting Services",
             description: "Tinting servcies offered as well",
             class: "my-card q-ma-lg q-pa-xl bg-dark text-primary",
             img: [require("../assets/bmw.jpg")],
             to: "src/pages/tints",
-          },
-          {
-            id: "cleaning",
-            title: "Cleaning Services",
-            description: "Get the best cleaning in town",
-            class: "my-card q-ma-lg q-pa-xl text-black",
-            img: [require("../assets/cleaning207.jpg")],
-            to: "src/pages/cleaning",
           },
         ],
       },
@@ -230,11 +231,20 @@ export default {
 </script>
 
 <style>
-#parallax{
+#button {
+  font-size: 25px;
+}
+#button.grow {
+  transition: all 0.2s ease-in-out;
+}
+#button.hover {
+  transform: scale(5.1);
+}
+#parallax {
   object-fit: fill;
 }
-#cleaning{
-  font-family: 'Poppins', sans-serif;
+#cleaning {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-weight: bold;
   display: flex;
   max-width: 700px;
@@ -262,8 +272,8 @@ export default {
   -moz-box-shadow: inset 0 1px 0 #5a622f;
   object-fit: contain;
 }
-#tint{
-  font-family: 'Poppins', sans-serif;
+#tint {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-weight: bold;
   display: flex;
   max-width: 700px;
@@ -290,7 +300,6 @@ export default {
   -webkit-box-shadow: inset 0 1px 0 #5a622f;
   -moz-box-shadow: inset 0 1px 0 #5a622f;
   object-fit: fill;
-
 }
 #ceramics {
   max-width: 700px;
@@ -316,7 +325,7 @@ export default {
   box-shadow: inset 0 1px 0 #5a622f;
   -webkit-box-shadow: inset 0 1px 0 #5a622f;
   -moz-box-shadow: inset 0 1px 0 #5a622f;
-  object-fit: contain ;
+  object-fit: contain;
 }
 #card {
   background: #4b5320;
@@ -368,14 +377,14 @@ export default {
   font-weight: 600;
 }
 #title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
 
   font-size: 50px;
   font-weight: bold;
   /* position:sticky; */
 }
 #breath-mint {
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   /* font-weight: bold; */
   font-size: 30px;
   background: #4b5320;
@@ -411,11 +420,21 @@ export default {
   font-weight: 500;
 }
 #first-para {
- font-family: 'Poppins', sans-serif;
- font-weight: bolder;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 #second-para {
- font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   font-size: 15px;
   background: #4b5320;
   color: #2d3502;
@@ -462,16 +481,20 @@ export default {
   #review-header {
     font-size: x-large;
   }
-  #ceramics{
+  #ceramics {
     padding: 1px;
     margin: 1px;
     font-size: small;
     object-fit: contain;
     align-content: center;
     size: 100px;
-    display: inline-flex;
+    display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
   }
-  #tint{
+  #tint {
     padding: 1px;
     margin: 1px;
     font-size: small;
@@ -481,7 +504,7 @@ export default {
     display: inline-flex;
     margin-top: 15px;
   }
-  #cleaning{
+  #cleaning {
     padding: 1px;
     margin: 1px;
     font-size: small;

@@ -3,17 +3,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet"/>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <q-header id = "title-container">
     <q-toolbar class="glossy" id="navbar">
         <div class="col-3" id = "title-container">
           <q-avatar size="56px" class="q-my-sm">
-            <img src="~assets/FABlogo.png" alt="Fab Logo" id="logo"/>
           </q-avatar>
         </div>
         <div class="col">
           <div class="text-black text-center" id="title">
-                FAB Cleaning
+                <b>F&G Detailing</b>
           </div>
         </div>
         <div class="col-3 text-primary" align="right">
@@ -106,6 +111,7 @@
 
 <style lang="css" scoped>
 #navbar{
+font-family:'Exo 2', sans-serif;
 background: #4B5320;
 color: #2D3502;
 background: linear-gradient(to bottom, #4B5320 0%, #3C4411 100%);
@@ -125,7 +131,7 @@ box-shadow: inset 0 1px 0 #5A622F;
 }
 #title{
   font-size: xxx-large;
-  font-family: "Lobster";
+ font-family: 'Exo 2', sans-serif;
   font-weight: lighter;
 
 }
