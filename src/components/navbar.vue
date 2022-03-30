@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
       rel="stylesheet"
     />
+    <!-- new font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
   <q-header id = "title-container">
     <q-toolbar class="glossy" id="navbar">
@@ -47,7 +51,7 @@
                   </q-btn>
                 </div>
               </q-item>
-              <q-item>
+              <!-- <q-item>
                 <div class="col">
                   <q-btn
                   class="text-primary"
@@ -58,7 +62,7 @@
                   About Me
                   </q-btn>
                 </div>
-              </q-item>
+              </q-item> -->
               </q-list>
             </q-menu>
           </q-btn>
@@ -131,8 +135,7 @@ box-shadow: inset 0 1px 0 #5A622F;
 }
 #title{
   font-size: xxx-large;
- font-family: 'Exo 2', sans-serif;
-  font-weight: lighter;
+  font-family: 'Poppins', sans-serif;
 
 }
 @media screen and (max-width: 400px) {

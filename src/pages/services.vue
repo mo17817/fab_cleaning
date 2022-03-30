@@ -25,7 +25,7 @@
     </div>
     <div class="q-gutter-md">
       <div class="row justify-between">
-        <q-parallax src="~assets/rari.jpg">
+        <q-parallax src="~assets/cleaning1.jpeg">
           <div align="center">
             <h2 id="tier-header" class="text-black">There's levels to this</h2>
           </div>

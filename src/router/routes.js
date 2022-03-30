@@ -9,8 +9,7 @@ const routes = [
       { path: 'about', component: () => import ('pages/about.vue') },
       { path: 'success', component: () => import ('pages/success.vue') },
       { path: 'ceramic', component:() => import ('pages/ceramic.vue') },
-      { path: 'tints', component:() => import ('pages/tints.vue')},
-      { path: 'cleaning', component:() => import ('pages/cleaning.vue')},
+      { path: 'powerwash', component:() => import ('pages/powerwash.vue')},
       { path: 'test', component: () => import ('pages/Test.vue') },
     ]
   },
