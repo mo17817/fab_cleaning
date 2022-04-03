@@ -50,8 +50,8 @@
   :class="objects.class"
   :title="objects.title"
   >
-  <q-card-section horizontal>
-    <q-avatar size = "399px" id = "img">
+  <q-card-section horizontal class="justify-center">
+    <q-avatar  align="center" size="399px" id = "img" class="justify-center">
     <q-img id="img" fit="contain" :src="objects.imgsrc" />
     </q-avatar>
   </q-card-section>
@@ -102,6 +102,9 @@ export default {
 #para{
   font-family: 'Exo 2', sans-serif;
   display: center;
+}
+#img{
+  resize: horizontal;
 }
 @media screen and (max-width: 400px){
   #title{

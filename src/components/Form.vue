@@ -23,6 +23,16 @@
         :rules="[(val) => (val && val.length > 0) || 'Please type something']"
         required
       />
+
+      <q-input
+      filled
+      name="number"
+      v-model="number"
+      label="Your phone number"
+      hint="enter your phone number"
+      required
+      />
+
       <q-input
         name="city"
         label="Your city"
@@ -52,7 +62,7 @@
         value="2021-12-12T19:30"
         min="2021-12-07T00:00"
         max="2021-14-14T00:00"
-        name="date"
+        name="datetime"
         hint="Please select the date and time of your appointment"
         required
       />
@@ -97,6 +107,11 @@ export default {
   },
   data() {
     return {
+      tieroptions: [{
+        Bronze: "Bronze-Tier",
+        Silver: "Silver-Tier",
+        Gold: "Gold-Tier"
+      }],
       tierSelected: this.tier,
     };
   },
@@ -109,6 +124,7 @@ export default {
     const service = ref(null);
     const moreInfo = ref(null);
     const datetime = ref(null);
+    const number = ref(null);
 
     return {
       name,
@@ -118,6 +134,7 @@ export default {
       service,
       moreInfo,
       datetime,
+      number,
       // testing,
     };
   },
@@ -125,10 +142,10 @@ export default {
     sendEmail() {
       emailjs
         .sendForm(
-          "service_0d5gf4w",
-          "template_09inwo6",
+          "service_du5178k",
+          "template_e5r7if7",
           this.$refs.serviceForm,
-          "user_AeOyJAdYQzXQO5tBd2JpC"
+          "MgRWH6gIETRDl3mYE"
         )
         .then(
           (res) => {

@@ -21,7 +21,7 @@
       align="center"
       id="breath-mint"
     >
-      <h2 id="our-services">Our Services</h2>
+      <h2 id="our-services">Our Service Tiers </h2>
     </div>
     <div class="q-gutter-md">
       <div class="row justify-between">

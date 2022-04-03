@@ -47,9 +47,11 @@
   <q-card
   class="q-pa-sm"
   >
-  <q-img src="~assets/rari.jpg" align="center">
+  <q-img src="~assets/powerwashing-3.jpg" align="center">
   </q-img>
-    <q-img src="~assets/cleaning207.jpg" align="center">
+    <q-img src="~assets/powerwashing-4.jpg" align="center">
+      </q-img>
+    <q-img src="~assets/powerwashing-5.jpg">
     </q-img>
   </q-card>
   <Form> </Form>
