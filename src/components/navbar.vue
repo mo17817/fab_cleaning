@@ -15,13 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
   <q-header id = "title-container">
-    <q-toolbar class="glossy" id="navbar">
+    <q-toolbar class="bg-black" id="navbar">
         <div class="col-3" id = "title-container">
           <q-avatar size="56px" class="q-my-sm">
           </q-avatar>
         </div>
         <div class="col">
-          <div class="text-black text-center" id="title">
+          <div class="text-white text-center" id="title">
                 <b>F&G Detailing</b>
           </div>
         </div>
