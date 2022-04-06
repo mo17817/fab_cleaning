@@ -27,9 +27,11 @@
 
   <div class="q-pa-sm bg-black">
     <div class="col q-pa-xs bg-black" align="center" id="breath-mint">
-      <h2 id="breath-mint-text" class="text-primary">
-        Like a breath mint for the whip
-      </h2>
+      <q-avatar rounded size="305px">
+        <q-img src="~assets/FGlogo.jpg">
+
+        </q-img>
+      </q-avatar>
     </div>
 
     <div id="carousel-container">
@@ -60,9 +62,9 @@
                 <h3 class="text-black" align="center" id="first-para">
                   {{ object.header }}
                 </h3>
-                <div class="col q-ma-sm" align="center">
-                  <q-avatar rounded size="70px">
-                    <q-img align="center" src="~assets/FABlogo.png" />
+                <div class="col q-mb-sm" align="center">
+                  <q-avatar rounded size="175px" >
+                    <q-img align="center" id="logo" src="~assets/FGlogo.jpg" />
                   </q-avatar>
                 </div>
 
@@ -233,6 +235,36 @@ export default {
 <style>
 #button {
   font-size: 25px;
+}
+#logo{
+  border-radius: 25px;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: flex;
+  max-width: 700px;
+  background: #4b5320;
+  color: #2d3502;
+  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #4b5320),
+    color-stop(100%, #3c4411)
+  );
+  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
+  border: 1px solid #2d3502;
+  text-shadow: 0 1px 0 #5a622f;
+  -webkit-text-shadow: 0 1px 0 #5a622f;
+  -moz-text-shadow: 0 1px 0 #5a622f;
+  box-shadow: inset 0 1px 0 #5a622f;
+  -webkit-box-shadow: inset 0 1px 0 #5a622f;
+  -moz-box-shadow: inset 0 1px 0 #5a622f;
+  object-fit: contain;
 }
 #button.grow {
   transition: all 0.2s ease-in-out;

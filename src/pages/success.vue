@@ -18,7 +18,7 @@
 
   <div class = "col" align = "center">
     <q-avatar size= "300px" align = "center">
-    <q-img src="~assets/FABlogo.png" id="img" align="center" type = "button" href = "/home" />
+    <q-img src="~assets/FGlogo.jpg" id="img" align="center" type = "button" href = "/home" />
     </q-avatar>
     <h3 align = "center" id = "service-req">
       Your service request has been submitted. We will get back to you shortly
@@ -26,7 +26,7 @@
       <q-btn
         to = "/"
         label = "click here for home page"
-        rounded 
+        rounded
         class = "text-black bg-primary"
         />
   </div>
@@ -39,5 +39,5 @@ export default {};
 #service-req{
   font-family: Raleway;
 }
- 
+
 </style>
