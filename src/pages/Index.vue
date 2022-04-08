@@ -28,7 +28,7 @@
   <div class="q-pa-sm bg-black">
     <div class="col q-pa-xs bg-black" align="center" id="breath-mint">
       <q-avatar size="305px" >
-        <q-img src="~assets/FGlogo207.jpg">
+        <q-img src="~assets/Fglogo207.jpg">
 
         </q-img>
       </q-avatar>
