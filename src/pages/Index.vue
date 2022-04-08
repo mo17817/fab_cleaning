@@ -27,8 +27,8 @@
 
   <div class="q-pa-sm bg-black">
     <div class="col q-pa-xs bg-black" align="center" id="breath-mint">
-      <q-avatar rounded size="305px" id="first-logo">
-        <q-img src="~assets/FGlogo.jpg">
+      <q-avatar size="305px" >
+        <q-img src="~assets/FGlogo207.jpg">
 
         </q-img>
       </q-avatar>
@@ -236,6 +236,12 @@ export default {
 #button {
   font-size: 25px;
 }
+#first-logo{
+    size: 305px;
+    object-fit: cover;
+    width: 500px;
+    height: 250px;
+  }
 #logo{
   border-radius: 45px;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
@@ -417,6 +423,7 @@ export default {
 }
 #breath-mint {
   font-family: "Exo 2", sans-serif;
+  object-fit: contain;
   /* font-weight: bold; */
   font-size: 30px;
   background: #4b5320;
@@ -529,6 +536,8 @@ export default {
   #first-logo{
     size: 305px;
     font-size: 305px;
+    object-fit: cover;
+    border-radius: 35px;
   }
   #tint {
     padding: 1px;
