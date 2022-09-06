@@ -15,19 +15,19 @@
       rel="stylesheet"
     />
   </head>
-  <div class="q-pa-sm bg-black">
+  <div class="q-pa-sm bg-light-blue-2">
     <div
-      class="col q-pa-xs bg-transparent text-primary"
+      class="col q-pa-xs bg-transparent text-white"
       align="center"
       id="breath-mint"
     >
-      <h2 id="our-services">Our Service Tiers </h2>
+      <h2  class="text-white" id="our-services" >Our Service Tiers </h2>
     </div>
     <div class="q-gutter-md">
       <div class="row justify-between">
         <q-parallax src="~assets/cleaning1.jpeg">
           <div align="center">
-            <h2 id="tier-header" class="text-black">There's levels to this</h2>
+            <h2 id="tier-header" class="text-white">There's levels to this</h2>
           </div>
         </q-parallax>
       </div>
@@ -98,7 +98,7 @@
         :scroll-offset="150"
         :offset="[18, 18]"
       >
-        <q-btn fab icon="keyboard_arrow_up" color="accent" />
+        <q-btn fab icon="keyboard_arrow_up" color="light-blue-2" />
       </q-page-scroller>
     </div>
     <q-dialog v-model="dialog">
@@ -130,7 +130,7 @@ export default {
           btn: "Book Bronze tier service",
           description:
             "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
-          class: "my-card bg-black text-brown-7",
+          class: "my-card bg-white text-brown-7",
           color: "brown-7",
           imgsrc: [require("../assets/bronzetier.png")],
         },
@@ -140,7 +140,7 @@ export default {
           btn: "Book Silver tier service",
           description:
             "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
-          class: "my-card bg-black text-grey-13",
+          class: "my-card bg-white text-grey-13",
           color: "grey-13",
           imgsrc: [require("../assets/silvertier.png")],
         },
@@ -150,7 +150,7 @@ export default {
           btn: "Book Gold tier service",
           description:
             "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
-          class: "my-card bg-black text-yellow-4",
+          class: "my-card bg-white text-yellow-4",
           color: "yellow-4",
           imgsrc: [require("../assets/goldtier.png")],
         },
@@ -165,6 +165,9 @@ export default {
 };
 </script>
 <style>
+#breath-mint{
+  font-weight: lighter;
+}
 #tier-header {
   font-family: "Lobster";
 }
@@ -203,6 +206,7 @@ export default {
 #our-services {
   font-family: "Lobster";
   font-size: 35px;
+  font-weight: lighter;
 }
 #booking {
   position: inline;

@@ -9,28 +9,45 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
       rel="stylesheet"
     />
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <!-- new font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
-  <q-header id = "title-container">
-    <q-toolbar class="bg-black" id="navbar">
+  <q-header id = "title-container" reveal >
+    <q-toolbar class="bg-light-blue-2" id="navbar">
         <div class="col-3" id = "title-container">
           <q-avatar size="56px" class="q-my-sm">
           </q-avatar>
         </div>
         <div class="col">
-          <div class="text-white text-center" id="title">
-                <b>F&G Detailing</b>
+          <div class="text-white text-center" id="title-container" style="font-size: 50px;">
+                <b><i> Jacks Dump  </i></b>
+                <q-avatar size="75px" circle round>
+                  <q-img src="~assets/jackscover1.jpg">
+F
+                  </q-img>
+                </q-avatar>
+          </div>
+          <div>
+
           </div>
         </div>
-        <div class="col-3 text-primary" align="right">
 
+        <div class="col-3 text-white" align="right">
           <q-btn icon="menu" class = "bg-black">
             <q-menu class="bg-black">
               <q-list align="center">
-                <q-item class="text-primary">
+                <q-item class="text-white">
                   <div class="col">
                     <q-btn
                     to="/"
@@ -43,7 +60,6 @@
                 <q-item>
                 <div class="col">
                   <q-btn
-                    class="text-primary"
                     flat
                     to="/services"
                   >
@@ -133,9 +149,13 @@ box-shadow: inset 0 1px 0 #5A622F;
 -webkit-box-shadow: inset 0 1px 0 #5A622F;
 -moz-box-shadow: inset 0 1px 0 #5A622F;
 }
+#title-container{
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    }
 #title{
   font-size: xxx-large;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold
 
 }
 @media screen and (max-width: 400px) {
