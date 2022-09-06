@@ -9,6 +9,12 @@
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -24,23 +30,24 @@
       rel="stylesheet"
     />
   </head>
+  <div class="q-pa-sm bg-light-blue-2">
+    <div class="col q-pa-xs" align="center">
+      <q-img src="~assets/jackscover1.jpg" id="jackscover"> </q-img>
+      <h2 class="text-white" style="font-weight: light">
+      </h2>
 
-  <div class="q-pa-sm bg-black">
-    <div class="col q-pa-xs bg-black" align="center" id="breath-mint">
-      <q-avatar size="305px" >
-        <q-img src="~assets/Fglogo207.jpg">
+      <!-- <q-avatar size="500px" align="left" style="border-radius: 0px;" >
+        <q-img src="~assets/jacksbodypic.jpg" id="jacks-header">
 
         </q-img>
-      </q-avatar>
+      </q-avatar> -->
     </div>
 
     <div id="carousel-container">
       <div class="col" id="text-container"></div>
 
       <q-separator color="black" size="8px" />
-      <div class="row justify-between">
-        <q-parallax id="parallax" src="~assets/cleaning4.jpeg"> </q-parallax>
-      </div>
+      <div class="row justify-between"></div>
     </div>
     <q-separator color="black" size="8px" />
     <!-- first card -->
@@ -63,8 +70,12 @@
                   {{ object.header }}
                 </h3>
                 <div class="col q-mb-sm" align="center">
-                  <q-avatar rounded size="175px" >
-                    <q-img align="center" id="logo" src="~assets/FGlogo.jpg" />
+                  <q-avatar rounded size="300px">
+                    <q-img
+                      align="center"
+                      id="logo"
+                      src="~assets/jackscover1.jpg"
+                    />
                   </q-avatar>
                 </div>
 
@@ -115,7 +126,7 @@
                   id="button"
                   hint="click for more"
                   :to="object.to"
-                  class="bg-accent"
+                  class="bg-secondary"
                   rounded
                   bordered
                   size="25px"
@@ -144,13 +155,60 @@
         </q-card-section>
       </q-card>
     </div>
+    <div class="flex flex-center q-pa-sm">
+      <q-card
+        v-for="object in serviceCards.yardWork"
+        :key="object"
+        :class="object.class"
+        flat
+        bordered
+        :id="object.id"
+      >
+        <q-space />
+        <q-card-section horizontal>
+          <q-card-section align="center">
+            <div class="col">
+              <h3 class="text-black" align="center" id="first-para">
+                <q-btn
+                  id="button"
+                  hint="click for more"
+                  :to="object.to"
+                  class="bg-secondary"
+                  rounded
+                  bordered
+                  size="25px"
+                >
+                  {{ object.title }}
+                </q-btn>
+              </h3>
+              <div class="col q-ma-sm" align="center"></div>
+
+              <q-separator horizontal color="primary" />
+              <h6 class="text-weight-heavy" id="first-para">c
+                <lb />
+                {{ object.description }}
+              </h6>
+              <div class="col q-my-sm">
+                <q-space />
+                <q-parallax>
+                  <template v-slot:media>
+                    <img :src="object.img" />
+                  </template>
+                  <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
+                </q-parallax>
+              </div>
+            </div>
+          </q-card-section>
+        </q-card-section>
+      </q-card>
+    </div>
     <!--page scroller-->
     <q-page-scroller
       position="bottom-right"
       :scroll-offset="200"
       :offset="[18, 18]"
     >
-      <q-btn fab icon="keyboard_arrow_up" color="primary" />
+      <q-btn fab icon="keyboard_arrow_up" color="secondary" />
     </q-page-scroller>
   </div>
   <!-- <div class="col" align="center" style="font-family: 'Exo 2', sans-serif">
@@ -166,9 +224,8 @@ import { ref } from "vue";
 import Carousel from "src/components/Carousel.vue";
 import Carousel3 from "components/Carousel3.vue";
 import Parallax from "components/Parallax.vue";
-
 export default {
-  components: {  },
+  components: {},
   setup() {
     return {
       slide: ref(1),
@@ -177,45 +234,53 @@ export default {
   data() {
     return {
       serviceCards: {
+
+        yardWork: [{
+          title: "Yard Work/Lawn Care",
+          description: "A clean environment=A clear mind",
+          id: "yard-work",
+          class: "my-card bg-white text-black",
+          img: [require("assets/dumpcleaning.jpg")]
+        }],
         interiorDetailing: [
           {
             id: "Interior-Car",
             header: "What we offer",
-            title: "Interior Car Detailing",
-            description:
-              "Interior car detailing requires more effort and time than exterior detailing. A dirty interior cabin not only has a bad odor, but also adds to operational complications. Dirty air exhaust spreads allergens about the cabin, stain and grit causes switches to fail, and hazy windows can obscure the view of a driver. In that case, cleaning a car’s interior is more than just washing with water and soap.",
+            title: "Painting Services",
+            description: "A home is the biggest investment you will ever make. It only makes sense to keep the biggest investment of your life in the best shape possible. The appearance of the home is a major factor in keeping its value. Painting the exterior of the house is not as hard as it appears; in fact its quite simple. In order to paint the house efficiently you will need a crew kit and a few different sized ladders. A crew kit is a large plastic bin with all of the tools needed for the job and more. Brushes and rollers are the two most known. Other tools include: scrapers, caulk guns, 5-in-1 tools, rags, drop clothes, pot hooks, buckets, self-priming paint, screens, hammers, steel wire brushes, extension poles, wood putty, putty knives, spinners, goo gone bottles, ladder mittens, and a first aid kit. They are all very important to getting the job done right.",
             price: "350 dollars",
-            class: "my-card",
-            imgsrc1: [require("../assets/before1.jpeg")],
-            imgsrc2: [require("../assets/after1.jpeg")],
+            class: "my-card bg-white",
+            imgsrc1: [require("../assets/painting.jpg")],
+            imgsrc2: [require("../assets/jacksbodypic.jpg")],
           },
         ],
         exteriorDetailing: [
           {
             id: "Exterior-Car",
-            title: "Auto-Detailing",
+            title: "Jumk Removal",
             description:
               "Exterior car detailing is not just a quick wash of the exterior components of a car. A good car detailer will make the car gleam, minimize surface scratches, and should always apply a shielding paint sealant",
-            class: "my-card",
+            class: "my-card bg-white",
             imgsrc1: [require("../assets/before4.jpeg")],
             imgsrc2: [require("../assets/after17.jpeg")],
           },
+
         ],
         ceramicCoating: [
           {
             id: "ceramics",
-            title: "Exterior-Detailing",
+            title: "Junk Removal",
             description:
               "The best clean your exterior will ever have",
-            class: "my-card q-ma-lg q-pa-xl text-black",
-            img: [require("../assets/cleaning207.jpg")],
+            class: "my-card q-ma-lg q-pa-xl bg-white text-black",
+            img: [require("../assets/dumpcleaning.jpg")],
             to: "src/pages/ceramic",
           },
           {
             id: "tint",
             title: "Power-Washing",
             description: "Get your home  looking brand new with our power washing",
-            class: "my-card q-ma-lg q-pa-xl bg-dark text-primary",
+            class: "my-card q-ma-lg q-pa-xl bg-white text-primary",
             img: [require("../assets/powerwashing-3.jpg")],
             to: "src/pages/powerwash",
           },
@@ -233,43 +298,28 @@ export default {
 </script>
 
 <style>
+#jackscover {
+  font-family: "Roboto", sans-serif;
+}
+#jacks-header {
+  object-fit: fill;
+}
 #button {
   font-size: 25px;
 }
-#first-logo{
-    size: 305px;
-    object-fit: cover;
-    width: 500px;
-    height: 250px;
-  }
-#logo{
+#first-logo {
+  size: 305px;
+  object-fit: cover;
+  width: 500px;
+  height: 250px;
+}
+#logo {
   border-radius: 45px;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-weight: bold;
   display: flex;
   max-width: 700px;
-  background: #4b5320;
-  color: #2d3502;
-  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #4b5320),
-    color-stop(100%, #3c4411)
-  );
-  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-  border: 1px solid #2d3502;
-  text-shadow: 0 1px 0 #5a622f;
-  -webkit-text-shadow: 0 1px 0 #5a622f;
-  -moz-text-shadow: 0 1px 0 #5a622f;
-  box-shadow: inset 0 1px 0 #5a622f;
-  -webkit-box-shadow: inset 0 1px 0 #5a622f;
-  -moz-box-shadow: inset 0 1px 0 #5a622f;
+
   object-fit: contain;
 }
 #button.grow {
@@ -341,28 +391,7 @@ export default {
 }
 #ceramics {
   max-width: 700px;
-  background: #4b5320;
-  color: #2d3502;
-  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #4b5320),
-    color-stop(100%, #3c4411)
-  );
-  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-  border: 1px solid #2d3502;
-  text-shadow: 0 1px 0 #5a622f;
-  -webkit-text-shadow: 0 1px 0 #5a622f;
-  -moz-text-shadow: 0 1px 0 #5a622f;
-  box-shadow: inset 0 1px 0 #5a622f;
-  -webkit-box-shadow: inset 0 1px 0 #5a622f;
-  -moz-box-shadow: inset 0 1px 0 #5a622f;
+
   object-fit: contain;
 }
 #card {
@@ -426,32 +455,7 @@ export default {
   object-fit: contain;
   /* font-weight: bold; */
   font-size: 30px;
-  background: #4b5320;
-  color: #2d3502;
-  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #4b5320),
-    color-stop(100%, #3c4411)
-  );
-  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-  border: 1px solid #2d3502;
-  text-shadow: 0 1px 0 #5a622f;
-  -webkit-text-shadow: 0 1px 0 #5a622f;
-  -moz-text-shadow: 0 1px 0 #5a622f;
-  box-shadow: inset 0 1px 0 #5a622f;
-  -webkit-box-shadow: inset 0 1px 0 #5a622f;
-  -moz-box-shadow: inset 0 1px 0 #5a622f;
   font-weight: bold;
-
-  /* position: fixed; */
-  /* font-weight: initial; */
 }
 #breath-mint-text {
   font-size: 30px;
@@ -475,28 +479,6 @@ export default {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-size: 15px;
-  background: #4b5320;
-  color: #2d3502;
-  background: linear-gradient(to bottom, #4b5320 0%, #3c4411 100%);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, #4b5320),
-    color-stop(100%, #3c4411)
-  );
-  background: -webkit-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -moz-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -o-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  background: -ms-linear-gradient(top, #4b5320 0%, #3c4411 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4B5320', endColorstr='#3C4411', GradientType=0);
-  border: 1px solid #2d3502;
-  text-shadow: 0 1px 0 #5a622f;
-  -webkit-text-shadow: 0 1px 0 #5a622f;
-  -moz-text-shadow: 0 1px 0 #5a622f;
-  box-shadow: inset 0 1px 0 #5a622f;
-  -webkit-box-shadow: inset 0 1px 0 #5a622f;
-  -moz-box-shadow: inset 0 1px 0 #5a622f;
 }
 #second-card {
   margin: 7px;
@@ -528,12 +510,12 @@ export default {
     align-content: center;
     size: 100px;
     display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
   }
-  #first-logo{
+  #first-logo {
     size: 305px;
     font-size: 305px;
     object-fit: cover;
