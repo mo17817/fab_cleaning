@@ -31,7 +31,7 @@
         </div>
         <div class="col">
           <div class="text-white text-center" id="title-container" style="font-size: 50px;">
-                <b><i> Jacks Dump  </i></b>
+                <b><i> Jax's Dump  </i></b>
                 <q-avatar size="75px" circle round>
                   <q-img src="~assets/jackscover1.jpg">
 F
