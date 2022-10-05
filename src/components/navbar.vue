@@ -23,26 +23,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
-  <q-header id = "title-container" reveal >
-    <q-toolbar class="bg-light-blue-2" id="navbar">
+  <q-header id = "title-container" reveal class="bg-image" >
+    <q-toolbar class="flex flex-center bg-black   q-pa-sm bg-image">
         <div class="col-3" id = "title-container">
-          <q-avatar size="56px" class="q-my-sm">
+          <q-avatar size="56px" class="flex flex-center q-my-sm" round>
+            <q-img rounded src="~assets/jackscover1.jpg">
+
+            </q-img>
           </q-avatar>
         </div>
-        <div class="col">
-          <div class="text-white text-center" id="title-container" style="font-size: 50px;">
-                <b><i> Jax's Dump  </i></b>
-                <q-avatar size="75px" circle round>
-                  <q-img src="~assets/jackscover1.jpg">
-F
-                  </q-img>
-                </q-avatar>
-          </div>
-          <div>
-
-          </div>
-        </div>
-
         <div class="col-3 text-white" align="right">
           <q-btn icon="menu" class = "bg-black">
             <q-menu class="bg-black">
@@ -130,6 +119,21 @@ F
 </template>
 
 <style lang="css" scoped>
+   .bg-image {
+  background-image: url("../~assets/jackscover1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+  .font-style{
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+font-kerning: auto;
+font-size: 24px;
+font-stretch: normal;
+font-style: normal;
+font-variant: normal;
+font-variant-ligatures: normal;
+font-weight: normal;
+  }
 #navbar{
 font-family:'Exo 2', sans-serif;
 background: #4B5320;

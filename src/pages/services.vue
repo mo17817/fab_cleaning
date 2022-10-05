@@ -15,21 +15,21 @@
       rel="stylesheet"
     />
   </head>
-  <div class="q-pa-sm bg-light-blue-2">
+  <div class="q-pa-sm bg-white">
     <div
-      class="col q-pa-xs bg-transparent text-white"
+      class="col q-pa-xs bg-transparent text-black"
       align="center"
       id="breath-mint"
     >
-      <h2  class="text-white" id="our-services" >Our Service Tiers </h2>
+      <h2  class="text-black" id="our-services" >Our Service Tiers </h2>
     </div>
     <div class="q-gutter-md">
       <div class="row justify-between">
-        <q-parallax src="~assets/cleaning1.jpeg">
+        <q-img src="~assets/jackscover1.jpg">
           <div align="center">
-            <h2 id="tier-header" class="text-white">There's levels to this</h2>
+            <!-- <h2 id="tier-header" class="text-white">There's levels to this</h2> -->
           </div>
-        </q-parallax>
+        </q-img>
       </div>
       <q-separator />
 
@@ -60,7 +60,7 @@
                 {{ value.description }}
               </h6>
 
-              <q-img class="col-5" :src="value.imgsrc" id="img" align="right" />
+              <!-- <q-img class="col-5" :src="value.imgsrc" id="img" align="right" /> -->
             </q-card-section>
           </q-card>
         </div>
@@ -71,7 +71,7 @@
               {{ value.title }} <q-icon name="military_tech" size="35px" />
             </div>
             <q-card-section horizontal id="img-title" align="center">
-              <q-img class="col-5" :src="value.imgsrc" id="img" align="right" />
+              <!-- <q-img class="col-5" :src="value.imgsrc" id="img" align="right" /> -->
               <h6 id = "description">
                 {{ value.description }}
               </h6>
@@ -101,7 +101,7 @@
         <q-btn fab icon="keyboard_arrow_up" color="light-blue-2" />
       </q-page-scroller>
     </div>
-    <q-dialog v-model="dialog">
+    <q-dialog v-model="dialog" class="text-black">
       <Form :tier="value"></Form>
     </q-dialog>
   </div>
@@ -129,17 +129,16 @@ export default {
           title: "Bronze",
           btn: "Book Bronze tier service",
           description:
-            "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
+            "we offer a series of different options if you decide to choose our bronze tier membership",
           class: "my-card bg-white text-brown-7",
           color: "brown-7",
-          imgsrc: [require("../assets/bronzetier.png")],
         },
         {
           id: "silver",
           title: "Silver",
           btn: "Book Silver tier service",
           description:
-            "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
+            "we offer a series of different options if you decide to choose our silver tier membership",
           class: "my-card bg-white text-grey-13",
           color: "grey-13",
           imgsrc: [require("../assets/silvertier.png")],
@@ -149,7 +148,7 @@ export default {
           title: "Gold",
           btn: "Book Gold tier service",
           description:
-            "we offer a series of different options if you decide to choose our gold tier membership as well as top class trim, top qaulity interior design",
+            "we offer a series of different options if you decide to choose our gold tier membership",
           class: "my-card bg-white text-yellow-4",
           color: "yellow-4",
           imgsrc: [require("../assets/goldtier.png")],

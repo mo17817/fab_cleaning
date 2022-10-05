@@ -22,17 +22,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
 <div class = "q-pa-sm row justify-between">
-<q-parallax src="~assets/rari.jpg">
- <h2 class="bg-transparent text-white" align = "center" id ="title"><b>Exterior-Detailing</b></h2>
- <lb />
-</q-parallax>
+<q-img src="~assets/jackscover1.jpg">
+</q-img>
 </div>
-<lb />
 <div class = "col-3 q-pa-sm q-ma-sm" align = "center">
   <h3 id = "title">Give your car the protection it needs</h3>
   <lb />
   <lb />
-  <div class = "text-white" align = "center" >
+  <div class = "text-black" align = "center" >
 
   <h4 id="para">
     From the everyday elements in the roads that it encounters in New England

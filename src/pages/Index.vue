@@ -30,187 +30,178 @@
       rel="stylesheet"
     />
   </head>
-  <div class="q-pa-sm bg-light-blue-2">
-    <div class="col q-pa-xs" align="center">
-      <q-img src="~assets/jackscover1.jpg" id="jackscover"> </q-img>
-      <h2 class="text-white" style="font-weight: light">
-      </h2>
-
-      <!-- <q-avatar size="500px" align="left" style="border-radius: 0px;" >
-        <q-img src="~assets/jacksbodypic.jpg" id="jacks-header">
-
-        </q-img>
-      </q-avatar> -->
+<!-- <q-layout  container style="height: 75%;" class="flex shadow-2 rounded-borders"> -->\
+  <!--first q-card-->
+  <div class="row q-pa-sm bg-container" style="align-items: center; width: 100%;">
+    <div class="col bg-image" style="height: 450px; alignment: center;">
     </div>
-
-    <div id="carousel-container">
-      <div class="col" id="text-container"></div>
-
-      <q-separator color="black" size="8px" />
-      <div class="row justify-between"></div>
-    </div>
-    <q-separator color="black" size="8px" />
-    <!-- first card -->
-    <div class="row q-ma-sm bg-black text-primary">
-      <div class="row q-ma-sm" id="first-card">
-        <!--first q-card-->
-
-        <q-card
-          v-for="object in serviceCards.interiorDetailing"
-          :key="object"
-          :class="object.class"
-          flat
-          bordered
-          id="card"
-        >
-          <q-card-section horizontal>
-            <q-card-section>
-              <div class="col">
-                <h3 class="text-black" align="center" id="first-para">
-                  {{ object.header }}
-                </h3>
-                <div class="col q-mb-sm" align="center">
-                  <q-avatar rounded size="300px">
-                    <q-img
-                      align="center"
-                      id="logo"
-                      src="~assets/jackscover1.jpg"
-                    />
-                  </q-avatar>
-                </div>
-
-                <q-separator horizontal color="black" />
-                <h6 class="text-black text-weight-heavy" id="first-para">
-                  <h3>{{ object.title }}</h3>
-                  <lb />
-                  {{ object.description }}
-                </h6>
-                <div class="col q-my-sm">
-                  <q-img class="col-3" :src="object.imgsrc1" height="600px" />
-                </div>
-                <div class="col q-my-sm">
-                  <q-img class="col-3" :src="object.imgsrc2" height="600px" />
-                </div>
-              </div>
-            </q-card-section>
-          </q-card-section>
-        </q-card>
-      </div>
-
-      <!--page scroller-->
-      <!-- <q-page-scroller
-        position="bottom-right"
-        :scroll-offset="200"
-        :offset="[18, 18]"
-      >
-        <q-btn fab icon="keyboard_arrow_up" color="primary" />
-      </q-page-scroller> -->
-    </div>
-
-    <!-- third card -->
-    <div class="flex flex-center q-pa-sm" id="first-card">
-      <q-card
-        v-for="object in serviceCards.ceramicCoating"
-        :key="object"
-        :class="object.class"
-        flat
-        bordered
-        :id="object.id"
-      >
-        <q-space />
-        <q-card-section horizontal>
-          <q-card-section align="center">
-            <div class="col">
-              <h3 class="text-black" align="center" id="first-para">
-                <q-btn
-                  id="button"
-                  hint="click for more"
-                  :to="object.to"
-                  class="bg-secondary"
-                  rounded
-                  bordered
-                  size="25px"
-                >
-                  {{ object.title }}
-                </q-btn>
-              </h3>
-              <div class="col q-ma-sm" align="center"></div>
-
-              <q-separator horizontal color="primary" />
-              <h6 class="text-weight-heavy" id="first-para">
-                <lb />
-                {{ object.description }}
-              </h6>
-              <div class="col q-my-sm">
-                <q-space />
-                <q-parallax>
-                  <template v-slot:media>
-                    <img :src="object.img" />
-                  </template>
-                  <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
-                </q-parallax>
-              </div>
-            </div>
-          </q-card-section>
-        </q-card-section>
-      </q-card>
-    </div>
-    <div class="flex flex-center q-pa-sm">
-      <q-card
-        v-for="object in serviceCards.yardWork"
-        :key="object"
-        :class="object.class"
-        flat
-        bordered
-        :id="object.id"
-      >
-        <q-space />
-        <q-card-section horizontal>
-          <q-card-section align="center">
-            <div class="col">
-              <h3 class="text-black" align="center" id="first-para">
-                <q-btn
-                  id="button"
-                  hint="click for more"
-                  :to="object.to"
-                  class="bg-secondary"
-                  rounded
-                  bordered
-                  size="25px"
-                >
-                  {{ object.title }}
-                </q-btn>
-              </h3>
-              <div class="col q-ma-sm" align="center"></div>
-
-              <q-separator horizontal color="primary" />
-              <h6 class="text-weight-heavy" id="first-para">c
-                <lb />
-                {{ object.description }}
-              </h6>
-              <div class="col q-my-sm">
-                <q-space />
-                <q-parallax>
-                  <template v-slot:media>
-                    <img :src="object.img" />
-                  </template>
-                  <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
-                </q-parallax>
-              </div>
-            </div>
-          </q-card-section>
-        </q-card-section>
-      </q-card>
-    </div>
-    <!--page scroller-->
-    <q-page-scroller
-      position="bottom-right"
-      :scroll-offset="200"
-      :offset="[18, 18]"
-    >
-      <q-btn fab icon="keyboard_arrow_up" color="secondary" />
-    </q-page-scroller>
   </div>
+  <q-separator color="black" horizontal inset />
+
+  <div class="row-2">
+    <div class="col-4">
+      <q-separator color="black" horizontal />
+    </div>
+  </div>
+
+  <div class="row flex flex-center">
+    <div class="col">
+      <q-layout view="hHh Lpr lFr" container style="height: 350px; width: auto; padding-top: 25%;" class="flex flex-column">
+    <div
+      class="col-4 flex flex-column"
+      style="padding: 5%; fit: contain"
+      id="first-card"
+      align="left"
+    >
+      <q-card
+        v-for="object in serviceCards.interiorDetailing"
+        :key="object"
+        :class="object.class"
+        class="flex col-4"
+        style="fit: contain"
+        flat
+        bordered
+        id="card"
+      >
+        <q-card-section>
+          <q-card-section>
+            <div class="col">
+              <h3 class="text-black" align="center" id="first-para">
+                {{ object.header }}
+              </h3>
+              <q-separator horizontal color="black" />
+              <h6 class="text-black text-weight-heavy" id="first-para">
+                <h3>{{ object.title }}</h3>
+                <lb />
+                {{ object.description }}
+              </h6>
+              <div class="col q-my-sm">
+                <q-img class="col-3" :src="object.imgsrc1" height="600px" />
+              </div>
+              <div class="col q-my-sm">
+                <q-img class="col-3" :src="object.imgsrc2" height="600px" />
+              </div>
+            </div>
+          </q-card-section>
+        </q-card-section>
+      </q-card>
+     </div>
+    </q-layout>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col">
+      <q-seperator color="black" style="font-size: 35px;"/>
+    </div>
+  </div>
+<div class="flex row flex-center bg-white">
+<div class="flex col">
+  <div class="flex flex-center q-pa-sm" id="first-card">
+    <q-card
+      v-for="object in serviceCards.ceramicCoating"
+      :key="object"
+      :class="object.class"
+      flat
+      bordered
+      :id="object.id"
+    >
+      <q-space />
+      <q-card-section horizontal>
+        <q-card-section align="center">
+          <div class="col">
+            <h3 class="text-black" align="center" id="first-para">
+              <q-btn
+                id="button"
+                hint="click for more"
+                :to="object.to"
+                class="bg-secondary"
+                rounded
+                bordered
+                size="25px"
+              >
+                {{ object.title }}
+              </q-btn>
+            </h3>
+            <div class="col q-ma-sm" align="center"></div>
+
+            <q-separator horizontal color="primary" />
+            <h6 class="text-weight-heavy" id="first-para">
+              <lb />
+              {{ object.description }}
+            </h6>
+            <div class="col q-my-sm">
+              <q-space />
+              <q-parallax>
+                <template v-slot:media>
+                  <img :src="object.img" />
+                </template>
+                <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
+              </q-parallax>
+            </div>
+          </div>
+        </q-card-section>
+      </q-card-section>
+    </q-card>
+  </div>
+</div>
+</div>
+
+  <div class="flex flex-center q-pa-sm">
+    <q-card
+      v-for="object in serviceCards.yardWork"
+      :key="object"
+      :class="object.class"
+      flat
+      bordered
+      :id="object.id"
+    >
+      <q-space />
+      <q-card-section horizontal>
+        <q-card-section align="center">
+          <div class="col">
+            <h3 class="text-black" align="center" id="first-para">
+              <q-btn
+                id="button"
+                hint="click for more"
+                class="bg-secondary"
+                rounded
+                bordered
+                size="25px"
+              >
+                {{ object.title }}
+              </q-btn>
+            </h3>
+            <div class="col q-ma-sm" align="center"></div>
+
+            <q-separator horizontal color="primary" />
+            <h6 class="text-weight-heavy" id="first-para">
+              c
+              <lb />
+              {{ object.description }}
+            </h6>
+            <div class="col q-my-sm">
+              <q-space />
+              <q-parallax>
+                <template v-slot:media>
+                  <img :src="object.img" />
+                </template>
+                <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
+              </q-parallax>
+            </div>
+          </div>
+        </q-card-section>
+      </q-card-section>
+    </q-card>
+  </div>
+  <!--page scroller-->
+  <q-page-scroller
+    position="bottom-right"
+    :scroll-offset="200"
+    :offset="[18, 18]"
+  >
+    <q-btn fab icon="keyboard_arrow_up" color="secondary" />
+  </q-page-scroller>
   <!-- <div class="col" align="center" style="font-family: 'Exo 2', sans-serif">
     <h1 class="text-primary" id="review-header">
       Hear from our loyal patrons!
@@ -234,20 +225,22 @@ export default {
   data() {
     return {
       serviceCards: {
-
-        yardWork: [{
-          title: "Yard Work/Lawn Care",
-          description: "A clean environment=A clear mind",
-          id: "yard-work",
-          class: "my-card bg-white text-black",
-          img: [require("assets/dumpcleaning.jpg")]
-        }],
+        yardWork: [
+          {
+            title: "Yard Work/Lawn Care",
+            description: "A clean environment=A clear mind",
+            id: "yard-work",
+            class: "my-card bg-white text-black",
+            img: [require("assets/dumpcleaning.jpg")],
+          },
+        ],
         interiorDetailing: [
           {
             id: "Interior-Car",
             header: "What we offer",
             title: "Painting Services",
-            description: "A home is the biggest investment you will ever make. It only makes sense to keep the biggest investment of your life in the best shape possible. The appearance of the home is a major factor in keeping its value. Painting the exterior of the house is not as hard as it appears; in fact its quite simple. In order to paint the house efficiently you will need a crew kit and a few different sized ladders. A crew kit is a large plastic bin with all of the tools needed for the job and more. Brushes and rollers are the two most known. Other tools include: scrapers, caulk guns, 5-in-1 tools, rags, drop clothes, pot hooks, buckets, self-priming paint, screens, hammers, steel wire brushes, extension poles, wood putty, putty knives, spinners, goo gone bottles, ladder mittens, and a first aid kit. They are all very important to getting the job done right.",
+            description:
+              "A home is the biggest investment you will ever make. It only makes sense to keep the biggest investment of your life in the best shape possible. The appearance of the home is a major factor in keeping its value. Painting the exterior of the house is not as hard as it appears; in fact its quite simple. In order to paint the house efficiently you will need a crew kit and a few different sized ladders. A crew kit is a large plastic bin with all of the tools needed for the job and more. Brushes and rollers are the two most known. Other tools include: scrapers, caulk guns, 5-in-1 tools, rags, drop clothes, pot hooks, buckets, self-priming paint, screens, hammers, steel wire brushes, extension poles, wood putty, putty knives, spinners, goo gone bottles, ladder mittens, and a first aid kit. They are all very important to getting the job done right.",
             price: "350 dollars",
             class: "my-card bg-white",
             imgsrc1: [require("../assets/painting.jpg")],
@@ -264,14 +257,12 @@ export default {
             imgsrc1: [require("../assets/before4.jpeg")],
             imgsrc2: [require("../assets/after17.jpeg")],
           },
-
         ],
         ceramicCoating: [
           {
             id: "ceramics",
             title: "Junk Removal",
-            description:
-              "The best clean your exterior will ever have",
+            description: "The best clean your exterior will ever have",
             class: "my-card q-ma-lg q-pa-xl bg-white text-black",
             img: [require("../assets/dumpcleaning.jpg")],
             to: "src/pages/ceramic",
@@ -279,7 +270,8 @@ export default {
           {
             id: "tint",
             title: "Power-Washing",
-            description: "Get your home  looking brand new with our power washing",
+            description:
+              "Get your home  looking brand new with our power washing",
             class: "my-card q-ma-lg q-pa-xl bg-white text-primary",
             img: [require("../assets/powerwashing-3.jpg")],
             to: "src/pages/powerwash",
@@ -298,6 +290,11 @@ export default {
 </script>
 
 <style>
+.bg-image {
+  background-image: url("../~assets/jackscover1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 #jackscover {
   font-family: "Roboto", sans-serif;
 }
@@ -498,7 +495,7 @@ export default {
   font-weight: 500;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 300px) {
   #review-header {
     font-size: x-large;
   }
@@ -540,6 +537,13 @@ export default {
     size: 100px;
     display: inline-flex;
     margin-top: 15px;
+  }
+  .bg-container{
+    align-content: center;
+    object-fit: fill;
+    column-width: 120px;
+    width: auto;
+    column-count: 1;
   }
 }
 </style>

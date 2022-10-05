@@ -21,18 +21,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
-<div class = "q-pa-sm row justify-between">
-<q-parallax src="~assets/cleaning207.jpg">
- <h3 class="bg-transparent text-white" align = "center" id ="title"><b>Power-Washing</b></h3>
- <lb />
-</q-parallax>
+<div class = "q-pa-sm row justify-between text-black">
+<q-img src="~assets/jackscover1.jpg">
+</q-img>
 </div>
-<lb />
 <div class = "col-3 q-pa-sm q-ma-sm" align = "center">
   <h3 id = "title">Get your car looking like it just came off the lot!</h3>
   <lb />
   <lb />
-  <div class = "text-white" align = "center" >
+  <div class = "text-black" align = "center" >
 
   <h4 id="para">
     With our professional power washing we'll get all the nooks and crannies

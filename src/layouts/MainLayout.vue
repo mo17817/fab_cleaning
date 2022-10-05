@@ -1,5 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh lPr lFf bg-white" class="bg-white">
+    <div>
     <navbar></navbar>
     <q-page-container>
       <q-page>
@@ -17,6 +18,7 @@
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
+    </div>
   </q-layout>
 </template>
 <script>
@@ -40,5 +42,10 @@ export default defineComponent({
   #footer {
     font-size: 10px;
   }
+}
+.bg-image {
+  background-image: url(assets/jackscover1.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 </style>
