@@ -141,8 +141,8 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `fab-cleaning`,
-        short_name: `fab-cleaning`,
+        name: `Jax's Dump`,
+        short_name: `Jax's Dump`,
         description: `this is the fab cleaning website repo`,
         display: 'standalone',
         orientation: 'portrait',

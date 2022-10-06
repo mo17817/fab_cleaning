@@ -47,7 +47,7 @@
       autoplay
       infinite
       animated
-      control-color="primary"
+      control-color="secondary"
       navigation
       padding
       height="400px"
