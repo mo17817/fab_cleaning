@@ -32,8 +32,8 @@
   </head>
 <!-- <q-layout  container style="height: 75%;" class="flex shadow-2 rounded-borders"> -->\
   <!--first q-card-->
-  <div class="row q-pa-sm bg-container" style="align-items: center; width: 100%;">
-    <div class="col bg-image" style="height: 450px; alignment: center;">
+  <div class="row q-pa-sm bg-container flex flex-center" style="align-items: center; width: 100%;">
+    <div class="col bg-image flex flex-center" style="height: 450px; alignment: center;">
     </div>
   </div>
   <q-separator color="black" horizontal inset />
@@ -578,6 +578,10 @@ export default {
   }
   .bg-container{
     align-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20%;
+    margin-top: 5%;
     object-fit: fill;
     column-width: 120px;
     width: auto;
