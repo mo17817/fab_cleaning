@@ -38,8 +38,46 @@
   </div>
   <q-separator color="black" horizontal inset />
 
-  <div class="row-2">
+  <div class="row-2 q-pa-sm">
     <div class="col-4">
+    <q-carousel
+      v-model="slide"
+      transition-prev="slide-right"
+      transition-next="slide-left"
+      autoplay
+      infinite
+      animated
+      control-color="primary"
+      navigation
+      padding
+      height="400px"
+      class="bg-grey-1 shadow-2 rounded-borders"
+    >
+      <q-carousel-slide :name="1" class="column no-wrap">
+        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic1.jpg" />
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic2.jpg" />
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide :name="2" class="column no-wrap">
+        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic3.jpg" />
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic4.jpg" />
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide :name="3" class="column no-wrap">
+        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic5.jpg" />
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic8.jpg" />
+        </div>
+      </q-carousel-slide>
+      <q-carousel-slide :name="4" class="column no-wrap">
+        <div class="row fit justify-start items-center q-gutter-xs q-col-gutter no-wrap">
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic9.jpg" />
+          <q-img class="rounded-borders col-6 full-height" src="~assets/pic10.jpg" />
+        </div>
+      </q-carousel-slide>
+      </q-carousel>
       <q-separator color="black" horizontal />
     </div>
   </div>
@@ -96,7 +134,6 @@
     </div>
   </div>
 <div class="flex row flex-center bg-white">
-<div class="flex col">
   <div class="flex flex-center q-pa-sm" id="first-card">
     <q-card
       v-for="object in serviceCards.ceramicCoating"
@@ -132,19 +169,18 @@
             </h6>
             <div class="col q-my-sm">
               <q-space />
-              <q-parallax>
+              <q-img size="150px" :src="object.img">
                 <template v-slot:media>
                   <img :src="object.img" />
                 </template>
                 <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
-              </q-parallax>
+              </q-img>
             </div>
           </div>
         </q-card-section>
       </q-card-section>
     </q-card>
   </div>
-</div>
 </div>
 
   <div class="flex flex-center q-pa-sm">
@@ -176,18 +212,18 @@
 
             <q-separator horizontal color="primary" />
             <h6 class="text-weight-heavy" id="first-para">
-              c
+
               <lb />
               {{ object.description }}
             </h6>
             <div class="col q-my-sm">
               <q-space />
-              <q-parallax>
+              <q-img :src="object.img">
                 <template v-slot:media>
                   <img :src="object.img" />
                 </template>
                 <!-- <q-img class="col-3" :src="object.img" height="600px" fit="fill" /> -->
-              </q-parallax>
+              </q-img>
             </div>
           </div>
         </q-card-section>
@@ -231,7 +267,7 @@ export default {
             description: "A clean environment=A clear mind",
             id: "yard-work",
             class: "my-card bg-white text-black",
-            img: [require("assets/dumpcleaning.jpg")],
+            img: [require("assets/pic5.jpg")],
           },
         ],
         interiorDetailing: [
@@ -262,9 +298,9 @@ export default {
           {
             id: "ceramics",
             title: "Junk Removal",
-            description: "The best clean your exterior will ever have",
+            description: "With Jax's dump you can say goodbye to trash",
             class: "my-card q-ma-lg q-pa-xl bg-white text-black",
-            img: [require("../assets/dumpcleaning.jpg")],
+            img: [require("../assets/pic10.jpg")],
             to: "src/pages/ceramic",
           },
           {
@@ -294,6 +330,8 @@ export default {
   background-image: url("../~assets/jackscover1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  position: center;
+  display: flex;
 }
 #jackscover {
   font-family: "Roboto", sans-serif;
