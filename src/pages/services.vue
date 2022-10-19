@@ -101,7 +101,7 @@
         <q-btn fab icon="keyboard_arrow_up" color="light-blue-2" />
       </q-page-scroller>
     </div>
-    <q-dialog v-model="dialog" class="text-black">
+    <q-dialog v-model="dialog">
       <Form :tier="value"></Form>
     </q-dialog>
   </div>

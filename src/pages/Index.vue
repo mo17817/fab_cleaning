@@ -32,8 +32,11 @@
   </head>
 <!-- <q-layout  container style="height: 75%;" class="flex shadow-2 rounded-borders"> -->\
   <!--first q-card-->
-  <div class="row q-pa-sm bg-container flex flex-center" style="align-items: center; width: 100%;">
-    <div class="col bg-image flex flex-center" style="height: 450px; alignment: center;">
+  <div class="row q-pa-sm bg-container flex flex-center" style="align-items: center; width: 100%; display: center;">
+    <div class="col flex flex-center" style="height: 450px; alignment: center; display: center;">
+      <q-img src="~assets/jackscover1.jpg" height="450px" style="width: 750px" id="main-img">
+
+      </q-img>
     </div>
   </div>
   <q-separator color="black" horizontal inset />
@@ -106,6 +109,9 @@
             <div class="col">
               <h3 class="text-black" align="center" id="first-para">
                 {{ object.header }}
+                  <h5>
+                    (scroll)
+                  </h5>
               </h3>
               <q-separator horizontal color="black" />
               <h6 class="text-black text-weight-heavy" id="first-para">
@@ -534,6 +540,10 @@ export default {
 }
 
 @media screen and (max-width: 300px) {
+  #main-img{
+    width: 350px;
+    height: 400px;
+  }
   #review-header {
     font-size: x-large;
   }

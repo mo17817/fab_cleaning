@@ -23,21 +23,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
   </head>
-  <q-header id = "title-container" reveal class="bg-image" >
-    <q-toolbar class="flex flex-center bg-black   q-pa-sm bg-image">
-        <div class="col-3" id = "title-container">
+  <q-header id = "title-container" reveal class="bg-image flex row-3">
+    <q-toolbar class="bg-black q-pa-sm bg-image">
+        <div class="col" id = "title-container">
           <q-avatar size="56px" class="flex flex-center q-my-sm" round>
             <q-img rounded src="~assets/jackscover1.jpg">
 
             </q-img>
           </q-avatar>
         </div>
-        <div class="col-3 text-white" align="right">
+        <q-toolbar-title class="col-8 flex flex-center" style="display: center;">
+        <h3 style="font-style: italic;" id="nav-title">
+          Jax's Dump LLC
+        </h3>
+      </q-toolbar-title>
+        <div class="col text-white" align="right">
           <q-btn icon="menu" class = "bg-black">
             <q-menu class="bg-black">
               <q-list align="center">
                 <q-item class="text-white">
-                  <div class="col">
+                  <div class="">
                     <q-btn
                     to="/"
                   >
@@ -47,7 +52,7 @@
 
                 </q-item>
                 <q-item>
-                <div class="col">
+                <div class="">
                   <q-btn
                     flat
                     to="/services"
@@ -162,9 +167,14 @@ box-shadow: inset 0 1px 0 #5A622F;
   font-weight: bold
 
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   #title{
     font-size: xx-large;
+  }
+  #nav-title{
+    font-size: 24px;
+    display: flex;
+    position: flex;
   }
 }
 
