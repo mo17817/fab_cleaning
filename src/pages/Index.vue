@@ -32,8 +32,8 @@
   </head>
 <!-- <q-layout  container style="height: 75%;" class="flex shadow-2 rounded-borders"> -->\
   <!--first q-card-->
-  <div class="row q-pa-sm bg-container flex flex-center" style="align-items: center; width: 100%; display: center;">
-    <div class="col flex flex-center" style="height: 450px; alignment: center; display: center;">
+  <div class="row q-pa-sm bg-container flex flex-center justify-center" style="align-items: center; width: 100%; display: center;">
+    <div class="col flex flex-center q-gutter-sm" style="height: 450px; alignment: center; display: center;">
       <q-img src="~assets/jackscover1.jpg" height="450px" style="width: 750px" id="main-img">
 
       </q-img>
