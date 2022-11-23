@@ -39,6 +39,8 @@
       </q-img>
     </div>
   </div>
+  <!-- add a construction cleanup page for residential and commercial construction -->
+  <!-- wait for Jax to populate text on services and what we offer and lazy load images -->
   <q-separator color="black" horizontal inset />
 
   <div class="row-2 q-pa-sm">
@@ -270,7 +272,7 @@ export default {
         yardWork: [
           {
             title: "Yard Work/Lawn Care",
-            description: "A clean environment=A clear mind",
+            description: " Will keep it clean, keep it neat, remove the junk, mop the floors. So you’re able to eat off the floors if necessary",
             id: "yard-work",
             class: "my-card bg-white text-black",
             img: [require("assets/pic5.jpg")],
@@ -280,9 +282,8 @@ export default {
           {
             id: "Interior-Car",
             header: "What we offer",
-            title: "Painting Services",
-            description:
-              "A home is the biggest investment you will ever make. It only makes sense to keep the biggest investment of your life in the best shape possible. The appearance of the home is a major factor in keeping its value. Painting the exterior of the house is not as hard as it appears; in fact its quite simple. In order to paint the house efficiently you will need a crew kit and a few different sized ladders. A crew kit is a large plastic bin with all of the tools needed for the job and more. Brushes and rollers are the two most known. Other tools include: scrapers, caulk guns, 5-in-1 tools, rags, drop clothes, pot hooks, buckets, self-priming paint, screens, hammers, steel wire brushes, extension poles, wood putty, putty knives, spinners, goo gone bottles, ladder mittens, and a first aid kit. They are all very important to getting the job done right.",
+            title: "Who We Are",
+            description:"Jaxs dump. It’s Your junk, and we need it now. Your junk your problems and we dump the solutions. A clean environment equals a clear mind. Jaxs dump is a family and team who decided to walk through a path. Where there is no path, make a trail. Turn nothing into something. Believe in a vision and make it into a reality. Our mission is to give that helping hand and put a smile on your face once the job is done. We believe time and providing good services is a valuable assets. From junk removal to handyman, landscape, and more. Not about getting to the destination but more like enjoying the journey and watching it grow. It’s an adventure. Jaxs dump call us. ",
             price: "350 dollars",
             class: "my-card bg-white",
             imgsrc1: [require("../assets/painting.jpg")],
@@ -294,7 +295,7 @@ export default {
             id: "Exterior-Car",
             title: "Jumk Removal",
             description:
-              "Exterior car detailing is not just a quick wash of the exterior components of a car. A good car detailer will make the car gleam, minimize surface scratches, and should always apply a shielding paint sealant",
+              " It’s your junk, and we need it now. You junk it, we dump it",
             class: "my-card bg-white",
             imgsrc1: [require("../assets/before4.jpeg")],
             imgsrc2: [require("../assets/after17.jpeg")],
@@ -304,7 +305,7 @@ export default {
           {
             id: "ceramics",
             title: "Junk Removal",
-            description: "With Jax's dump you can say goodbye to trash",
+            description: "It’s your junk, and we need it now. You junk it, we dump it",
             class: "my-card q-ma-lg q-pa-xl bg-white text-black",
             img: [require("../assets/pic10.jpg")],
             to: "src/pages/ceramic",
@@ -313,7 +314,7 @@ export default {
             id: "tint",
             title: "Power-Washing",
             description:
-              "Get your home  looking brand new with our power washing",
+              "We want you to look at your reflection afterward, and be like damm I look good",
             class: "my-card q-ma-lg q-pa-xl bg-white text-primary",
             img: [require("../assets/powerwashing-3.jpg")],
             to: "src/pages/powerwash",
